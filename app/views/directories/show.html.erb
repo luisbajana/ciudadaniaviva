@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @directory.name %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @directory.location_id %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @directory.category %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @directory.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_directory_path(@directory) %> |
+<%= link_to 'Back', directories_path %>

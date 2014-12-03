@@ -1,0 +1,29 @@
+<h1>Directorios</h1>
+
+<table class="table">
+  <tr>
+    <th>Nombre</th>
+    <th>Ubicación</th>
+    <th>Categoría</th>
+    <th>Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @directories.each do |directory| %>
+  <tr>
+    <td><%= directory.name %></td>
+    <td><%= directory.location_id %></td>
+    <td><%= directory.category %></td>
+    <td><%= directory.url %></td>
+    <td><%= link_to 'Show', directory %></td>
+    <td><%= link_to 'Edit', edit_directory_path(directory) %></td>
+    <td><%= link_to 'Destroy', directory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Directory', new_directory_path %>

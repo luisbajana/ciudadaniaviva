@@ -1,0 +1,36 @@
+<%= form_for(@support) do |f| %>
+  <% if @support.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@support.errors.count, "error") %> prohibited this support from being saved:</h2>
+
+      <ul>
+      <% @support.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :cause_id, :value => cause_id(params[:cause]) %>
+  
+
+  <div class="field">
+    <%= f.label "Voy a colaborar en este lugar: " %><br />
+    <%= f.select(:address, options_for_select(@locations.map(&:address)), {}, {:class => 'form-control'}) %>
+  </div>
+  
+
+  <div class="field">
+    <%= f.label "Voy a ir en esta fecha: " %><br />
+    <%= f.text_field :date, :class => 'form-control' %>
+  </div>
+
+  <br />
+
+  <div class="actions">
+    <%= f.submit "Unirme a esta causa", :class => "btn btn-success btn-lg btn-block reciclar-button" %>
+  </div>
+
+  <br />
+
+<% end %>

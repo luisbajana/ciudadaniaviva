@@ -1,0 +1,127 @@
+
+
+<% if current_user %>  
+
+
+  <script src="https://cdn.pubnub.com/pubnub.min.js"></script>
+    <script charset="utf-8">
+      $(document).ready(function(){
+        var conexiones;
+        var usuarios = [];
+        var cantidad = 0;
+        var PUBNUB_demo = PUBNUB.init({
+          publish_key: 'pub-c-a3b23a0c-0854-458f-97ed-099cfcbe117e',
+          subscribe_key: 'sub-c-59439186-7243-11e4-98fa-02ee2ddab7fe'
+        });
+
+        
+        PUBNUB_demo.subscribe({
+          channel: 'ciudadaniaviva',
+          message: function(m){
+            usuarios.push(m);
+            //cantidad += usuarios.length;
+            cantidad ++;
+            $("#mensajes").empty();
+            $("#mensajes").append( cantidad );
+          },
+          connect : publish
+        });
+        
+        function publish() {
+          
+          PUBNUB_demo.publish({
+            channel: 'ciudadaniaviva',
+            message: "<%= current_user.name %>"
+          });
+        }
+        
+      });
+
+      
+  
+
+    </script>
+
+
+  <div>
+    <h2>Causas</h2>
+    <ul>
+      <% @causes.each do |cause| %>
+        <li><%= link_to cause.title, "/#{cause.custom_url}" %></li>
+      <% end %>
+    </ul>
+
+  </div>
+    
+
+  <div class="col-md-12">
+    <h3><%= current_user.name %>, ahora somos <span id="mensajes"></span>, juntos lograremos un impacto es: 7 árboles salvados</h3>
+    <%= link_to "Cerrar Sesión", '/signout' %>
+    
+  </div>
+    
+
+
+  <%= gmaps({
+    "map_options" => { "detect_location" => true, "center_on_user" => true, "auto_zoom" => false, "zoom" => 11 },
+    "markers"     => {"data" => @json }
+   })
+    %>
+
+
+
+
+
+<% else %>  
+  <!-- =========================
+     HEADER   
+    ============================== -->
+    <header class="header" data-stellar-background-ratio="0.5" id="home">
+
+    <!-- COLOR OVER IMAGE -->
+    <div class="color-overlay"> <!-- To make header full screen. Use .full-screen class with color overlay. Example: <div class="color-overlay full-screen">  -->
+      
+      
+      <!-- CONTAINER -->
+      <div class="container">
+        
+        <!-- ONLY LOGO ON HEADER -->
+        <div class="only-logo">
+          <div class="navbar">
+            <div class="navbar-header">
+              <img src="assets/logo.png" alt="">
+            </div>
+          </div>
+        </div> <!-- /END ONLY LOGO ON HEADER -->
+        
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            
+            <!-- HEADING AND BUTTONS -->
+            <div class="intro-section">
+              
+              <!-- WELCOM MESSAGE -->
+              <h1 class="intro">Juntos podemos resolver más problemas</h5>
+              <h5>Crea o únete a una causa con tu cuenta de Twitter</h5>
+              <!-- BUTTON -->
+              <div class="buttons" id="download-button">
+                
+                <a href="/auth/twitter" class="btn btn-default btn-lg standard-button">Unirme</a>
+                
+              </div>
+              <!-- /END BUTTONS -->
+              
+            </div>
+            <!-- /END HEADNING AND BUTTONS -->
+            
+          </div>
+        </div>
+        <!-- /END ROW -->
+        
+      </div>
+      <!-- /END CONTAINER -->
+    </div>
+    <!-- /END COLOR OVERLAY -->
+    </header>
+    <!-- /END HEADER -->
+<% end %> 

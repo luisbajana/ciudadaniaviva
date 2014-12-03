@@ -1,0 +1,38 @@
+LOG:  database system was shut down at 2014-11-23 13:01:02 ECT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  operator does not exist: character varying = integer at character 63
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+STATEMENT:  SELECT  "elements".* FROM "elements"  WHERE "elements"."name" = 86 LIMIT 1
+ERROR:  operator does not exist: character varying = integer at character 63
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+STATEMENT:  SELECT  "elements".* FROM "elements"  WHERE "elements"."name" = 86 LIMIT 1
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2014-11-27 13:02:42 ECT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  column "title" does not exist at character 8
+STATEMENT:  select title from partes where id=123;
+ERROR:  column "name" does not exist at character 8
+STATEMENT:  select name from partes where id=123;
+ERROR:  column "nombre" does not exist at character 8
+STATEMENT:  select nombre from partes where id=123;
+ERROR:  column "nombre" does not exist at character 8
+STATEMENT:  select nombre from partes where id=123;
+ERROR:  relation "supports" already exists
+STATEMENT:  CREATE TABLE "supports" ("id" serial primary key, "cause_id" integer, "user_id" integer, "hour" character varying(255), "date" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+ERROR:  operator does not exist: character varying = integer at character 58
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+STATEMENT:  SELECT  "causes".* FROM "causes"  WHERE "causes"."title" = 1 LIMIT 1
+ERROR:  operator does not exist: character varying = integer at character 58
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+STATEMENT:  SELECT  "causes".* FROM "causes"  WHERE "causes"."title" = 1 LIMIT 1
+FATAL:  database "moneycyle/" does not exist
+FATAL:  database "moneycycle" does not exist
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
