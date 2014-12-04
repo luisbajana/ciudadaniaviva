@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141130235858) do
+ActiveRecord::Schema.define(:version => 20141203215534) do
 
   create_table "causes", :force => true do |t|
     t.string   "title"
@@ -107,14 +107,14 @@ ActiveRecord::Schema.define(:version => 20141130235858) do
   end
 
   create_table "locations", :force => true do |t|
-    t.string   "address"
     t.float    "latitude"
     t.string   "longitude"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
-    t.string   "description"
     t.integer  "directory_id"
     t.string   "gmaps"
+    t.text     "description"
+    t.text     "address"
   end
 
   create_table "partes", :force => true do |t|

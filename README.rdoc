@@ -1,1 +1,8 @@
 rails g model support user_id:integer cause_id:integer date:string hour:string
+
+
+How to restart your heroku key with multiple apps
+$ heroku config:set AWS_ACCESS_KEY_ID=AKIAJLLZPGFTPX3YMSZQ --app safe-wildwood-6956-565
+
+Private key
+$ heroku config:set AWS_SECRET_ACCESS_KEY=z4/cW6TI2kqAfsxfN60aQo/MU+GxhW8X+Gsnw0dD --app safe-wildwood-6956-565
