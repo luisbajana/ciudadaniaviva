@@ -4,6 +4,9 @@
   <h1><%= @cause.title %></h1>
   <h3><%= @supporters.count %> personas apoyando esta causa</h3>
   <p><%= @cause.description %></p>
+
+  <%= image_tag @cause.photo.url(:square) %>
+
 </div>
 
 
