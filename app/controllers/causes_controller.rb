@@ -65,6 +65,7 @@ class CausesController < ApplicationController
     @supporters = Support.find_all_by_cause_id(@cause.id)
 
     @locations = Location.find_all_by_directory_id(@cause.dataset)
+    
 
     @json = Location.find_all_by_directory_id(@cause.dataset).to_gmaps4rails do |search, marker|
          marker.infowindow render_to_string(:partial => "/causes/infoWindow", :locals => { :address => search.address })
