@@ -1,22 +1,73 @@
 <p id="notice"><%= notice %></p>
 
-<div class="col-md-6">
-  <h1><%= @cause.title %></h1>
-  <h3><%= @supporters.count %> personas apoyando esta causa</h3>
-  <p><%= @cause.description %></p>
 
-  <%= image_tag @cause.photo.url(:square) %>
 
+
+
+
+
+
+
+
+
+
+<!-- 
+<section class="download" id="download" style="background-image: url(<%= root_url %>assets/bg-3.jpg)"> 
+-->
+
+<% if @cause.photo.url(:medium) == "/assets/missing.png" %>
+  <section class="download" id="download" style="background-image: url(<%= root_url %>assets/bg-1.jpg)">  
+<% else %>    
+   <section class="download" id="download" style="background-image: url(<%= root_url %><%= @cause.photo.url(:medium) %>)">
+<% end %>
+
+<div class="color-overlay">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        
+      
+        <div class="subscription-form-container">
+          
+          <h2 class="wow fadeInLeft animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;"><%= @cause.title %></h2>
+          
+          <%= render 'supports/form' %>     
+
+        </div>
+                
+        
+      </div> 
+      <!-- END COLUMN -->
+      
+    </div> 
+    <!-- END ROW -->
+    
+  </div>
+  <!-- /END CONTAINER -->
 </div>
+<!-- /END COLOR OVERLAY -->
+
+</section>
 
 
-<div class="col-md-6">
-	<% if already_supporter(@cause.id,current_user.id) == false %>
-		<%= render 'supports/form' %>
-	<% else %>	
-		<h3>Gracias ya estás ayudando en esta causa</h3>
-		<%= custom_tweet_button('Compártelo y ayúdanos a llegar a la meta',{ :via => "ciudadaniaviva", :url => "http://www.ciudadaniaviva.com/"+@cause.custom_url, :text => "Voy a ayudar en "+@cause.title }, {:class => "btn btn-lg btn-success"}) %>
-	<% end %>
+
+
+
+
+
+<div class="col-md-12">
+  <% if current_user %>
+  	<% if already_supporter(@cause.id,current_user.id) == false %>
+  		<%= render 'supports/form' %>
+  	<% else %>	
+  		<h3>Gracias ya estás ayudando en esta causa</h3>
+  		<%= custom_tweet_button('Compártelo y ayúdanos a llegar a la meta',{ :via => "ciudadaniaviva", :url => "http://www.ciudadaniaviva.com/"+@cause.custom_url, :text => "Voy a ayudar en "+@cause.title }, {:class => "btn btn-lg btn-success"}) %>
+  	<% end %>
+    
+  <% else %>
+    <a href="/auth/twitter" class="btn btn-default btn-lg standard-button">Unirme</a>
+  <% end %>
 </div>
 
 
@@ -40,5 +91,10 @@
    })
     %>
 
-<%= link_to 'Edit', edit_cause_path(@cause) %> |
-<%= link_to 'Back', causes_path %>
+  <% if current_user %>
+      <% if current_user.id == @cause.user_id %>
+        <%= link_to 'Editar', edit_cause_path(@cause) %> |
+        <%= link_to 'Regresar', causes_path %>
+      <% end %>
+  <% end %>
+

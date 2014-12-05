@@ -679,7 +679,8 @@ object {
 -----------------------------------------*/
 
 .download {
-    background: url('/assets/bg-3.jpg') no-repeat center fixed;
+    /* background: url('/assets/bg-3.jpg') no-repeat center fixed; */
+    background: no-repeat center fixed;
     -webkit-background-size: cover;
             background-size: cover;
     color: #ffffff;

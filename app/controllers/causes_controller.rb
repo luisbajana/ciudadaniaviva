@@ -111,10 +111,11 @@ class CausesController < ApplicationController
   # POST /causes.json
   def create
     @cause = Cause.new(params[:cause])
+    @cause.user_id = current_user.id;
 
     respond_to do |format|
       if @cause.save
-        format.html { redirect_to @cause, notice: 'Cause was successfully created.' }
+        format.html { redirect_to '/'+@cause.custom_url, notice: '¡Épico! tu causa fué creada, ahora a ¡difundirla!' }
         format.json { render json: @cause, status: :created, location: @cause }
       else
         format.html { render action: "new" }
@@ -130,7 +131,7 @@ class CausesController < ApplicationController
 
     respond_to do |format|
       if @cause.update_attributes(params[:cause])
-        format.html { redirect_to @cause, notice: 'Cause was successfully updated.' }
+        format.html { redirect_to '/'+@cause.custom_url, notice: '¡Genial! fué actualizado con éxito' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
