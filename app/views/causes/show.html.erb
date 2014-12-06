@@ -15,7 +15,7 @@
 <section class="download" id="download" style="background-image: url(<%= root_url %>assets/bg-3.jpg)"> 
 -->
 
-<% if @cause.photo.url(:square) == "/assets/missing.png" %>
+<% if @cause.photo.url(:medium) == "/assets/missing.png" %>
   <section class="download" id="download" style="background-image: url(<%= root_url %>assets/bg-1.jpg)">  
 <% else %>    
    <section class="download" id="download" style="background-image: url(<%= @cause.photo.url(:medium) %>)">

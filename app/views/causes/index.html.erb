@@ -12,7 +12,7 @@
             <li class="col-md-4">
               <div class="thumbnail" style="padding: 0">
                 <div style="padding:4px">
-                  <%= image_tag cause.photo.url(:medium) %>
+                  <%= image_tag cause.photo.url(:square) %>
                 </div>
                 <div class="caption">
                   <h3><%= link_to cause.title, "/#{cause.custom_url}" %></h3>
