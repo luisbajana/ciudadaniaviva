@@ -46,10 +46,12 @@ class LocationsController < ApplicationController
   # POST /locations.json
   def create
     @location = Location.new(params[:location])
+    session[:return_to] ||= request.referer
+
 
     respond_to do |format|
       if @location.save
-        format.html { redirect_to @location, notice: 'Location was successfully created.' }
+        format.html { redirect_to session.delete(:return_to), notice: 'Location was successfully created.' }
         format.json { render json: @location, status: :created, location: @location }
       else
         format.html { render action: "new" }
