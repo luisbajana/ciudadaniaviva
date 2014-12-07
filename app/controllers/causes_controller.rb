@@ -120,7 +120,7 @@ class CausesController < ApplicationController
 
     respond_to do |format|
       if @cause.save
-        format.html { redirect_to '/'+@cause.custom_url, notice: '¡Épico! tu causa fué creada, ahora a ¡difundirla!' }
+        format.html { redirect_to '/'+@cause.custom_url, notice: '¡Genial! tu causa fué creada, ahora a ¡difundirla!' }
         format.json { render json: @cause, status: :created, location: @cause }
       else
         format.html { render action: "new" }
