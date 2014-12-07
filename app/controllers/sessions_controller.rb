@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 	    auth = request.env["omniauth.auth"]  
 	    user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.create_with_omniauth(auth)  
 	    session[:id] = user.id
-	    redirect_to request.env['omniauth.origin'] || '/default', :notice => "¡Hola! Bienvenid@"  
+	    redirect_to request.env['omniauth.origin'] || '/causes/new', :notice => "¡Hola! Bienvenid@"  
   	end  
 
   	def destroy  

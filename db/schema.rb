@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141204215256) do
+ActiveRecord::Schema.define(:version => 20141206170848) do
 
   create_table "causes", :force => true do |t|
     t.string   "title"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20141204215256) do
     t.string   "url"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "user_id"
   end
 
   create_table "ecuador_agua_consumos", :force => true do |t|
@@ -120,6 +121,7 @@ ActiveRecord::Schema.define(:version => 20141204215256) do
     t.string   "gmaps"
     t.text     "description"
     t.text     "address"
+    t.integer  "user_id"
   end
 
   create_table "partes", :force => true do |t|

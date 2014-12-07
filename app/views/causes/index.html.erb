@@ -35,7 +35,14 @@
 
                   <div class="row">
                     
-                    <div class="col-md-6 text-center"><b><%= num_supporters(cause.id) %></b><br/><small>PERSONAS AYUDANDO</small></div>
+                    <div class="col-md-6 text-center"><b><%= num_supporters(cause.id) %></b><br/>
+                      <% if num_supporters(cause.id) > 1 or num_supporters(cause.id)==0 %>
+                        <small>PERSONAS AYUDANDO</small>
+                      <% else %>
+                        <small>PERSONA AYUDANDO</small>
+                      <% end %>
+
+                    </div>
 
                     <div class="col-md-6 text-center"><b><%= cause.goal %></b><br/><small>NECESITAMOS</small></div>
                     

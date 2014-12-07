@@ -33,8 +33,8 @@ logo@2x.png: logo@2x-02c352135b25e1ef0d5fc887e11da58b.png
 logo@2x/index.png: logo@2x-02c352135b25e1ef0d5fc887e11da58b.png
 logo_black.png: logo_black-e6922086e9cf692a5f25dca3c919bc8f.png
 logo_black/index.png: logo_black-e6922086e9cf692a5f25dca3c919bc8f.png
-marker.png: marker-62a76ab8686c40188e46454b0126435d.png
-marker/index.png: marker-62a76ab8686c40188e46454b0126435d.png
+marker.png: marker-44a86698795d081b3ac1a9b8012e9430.png
+marker/index.png: marker-44a86698795d081b3ac1a9b8012e9430.png
 rails.png: rails-71e944d9b39043eba50b77788c0d767f.png
 rails/index.png: rails-71e944d9b39043eba50b77788c0d767f.png
 screenshots/1.jpg: screenshots/1-59f2f48fc2ae511ee8988e129cdc5ec7.jpg

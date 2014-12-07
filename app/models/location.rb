@@ -1,5 +1,5 @@
 class Location < ActiveRecord::Base
-  attr_accessible :address, :latitude, :longitude, :description, :directory_id, :gmaps
+  attr_accessible :address, :latitude, :longitude, :description, :directory_id, :gmaps, :user_id
 
   belongs_to :directory
 

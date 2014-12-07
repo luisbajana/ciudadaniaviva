@@ -1,8 +1,11 @@
 class CausesController < ApplicationController
   # GET /causes
   # GET /causes.json
+
+  before_filter :auth_user, :except => [:index, :show]
+
   def index
-    @causes = Cause.all
+    @causes = Cause.order("id DESC").all
     #$twitter.update("@luisbajana Hola creador!")
 
     @json = Location.all.to_gmaps4rails
