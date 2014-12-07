@@ -51,7 +51,7 @@ class LocationsController < ApplicationController
 
     respond_to do |format|
       if @location.save
-        format.html { redirect_to session.delete(:return_to), notice: 'Location was successfully created.' }
+        format.html { redirect_to session.delete(:return_to), notice: 'La dirección fué creada con éxito.' }
         format.json { render json: @location, status: :created, location: @location }
       else
         format.html { render action: "new" }

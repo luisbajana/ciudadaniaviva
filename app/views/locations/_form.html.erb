@@ -20,17 +20,17 @@
     <%= f.text_field :description %>
   </div>
 
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+
 
   <div class="field">
     <%= f.label "Directorio" %>
     <%= f.select(:directory_id, options_from_collection_for_select(Directory.all, :id, :name,:selected => params[:directory_id]), {}, {:class => 'form-control'}) %>
   </div>
 
-
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
-  </div>
   
   <div class="actions">
     <%= f.submit %>
