@@ -1,29 +1,50 @@
-<h1>Directorios</h1>
+<div class="col-md-12  left-align wow fadeInLeft animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
+      
+      <!-- SECTION TITLE -->
+      <h2 class="dark-text">Directorios</h2>
+      
+      
+      <p>Los directorios contienen direcciones a donde las personas pueden ir para ayudar en una causa.</p>
 
-<table class="table">
+      <%= link_to 'Crea un Directorio', new_directory_path, :class=>"btn btn-success" %>
+
+      <br />
+      <br />
+      <br />
+      
+      
+</div>
+
+
+
+
+
+<div class="col-md-12 text-left">
+
+
+<table class="table table-hover">
   <tr>
     <th>Nombre</th>
-    <th>Ubicación</th>
+    <th>Descripción</th>
     <th>Categoría</th>
-    <th>Url</th>
-    <th></th>
-    <th></th>
+    <th>Direcciones</th>
     <th></th>
   </tr>
 
 <% @directories.each do |directory| %>
   <tr>
-    <td><%= directory.name %></td>
-    <td><%= directory.location_id %></td>
+    <td><strong><%= directory.name %></strong></td>
+    <td><%= directory.description %></td>
     <td><%= directory.category %></td>
-    <td><%= directory.url %></td>
-    <td><%= link_to 'Show', directory %></td>
-    <td><%= link_to 'Edit', edit_directory_path(directory) %></td>
-    <td><%= link_to 'Destroy', directory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= locations_per_directory(directory.id) %></td>
+    <td><%= link_to 'Ver', directory, :class=>"btn btn-success" %></td>
+
+
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Directory', new_directory_path %>
+
+</div>

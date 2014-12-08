@@ -1,3 +1,6 @@
+<div class="row">
+<div class="col-md-5 col-md-offset-3">
+
 <%= form_for(@directory) do |f| %>
   <% if @directory.errors.any? %>
     <div id="error_explanation">
@@ -11,13 +14,38 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
+  <div class="form-group">
+      <label for="description" class="col-sm-3 control-label">Nombre</label>
+      <div class="col-sm-9">
+          <%= f.text_field :name, :class => 'form-control input-box', :placeholder => "Ej.: Hospitales de Santiago" %>
+      </div>
+  </div> 
+
+  <div class="form-group">
+      <label for="description" class="col-sm-3 control-label">Descripción</label>
+      <div class="col-sm-9">
+          <%= f.text_area :description, :size => "20x2", :class => 'form-control input-box', :placeholder => "Ej.: Lista de todos los hospitales de la ciudad de Santiago" %>
+      </div>
+  </div> 
+
+  <div class="form-group">
+      <label for="description" class="col-sm-3 control-label">Categoría</label>
+      <div class="col-sm-9">
+         <%= f.select :category, options_for_select(["Comunidad","Medio Ambiente","Salud", "Educación"]), {}, {:class=>"form-control input-box"}  %>
+      </div>
+  </div> 
   
   
-  <div class="actions">
-    <%= f.submit %>
+  
+  <div class="form-group">
+      <div class="col-sm-12 text-right">
+          <button class="btn btn-success standard-button2 ladda-button" type="submit" id="submit" name="submit" data-style="expand-left">Siguiente</button>
+      </div>
   </div>
+
+
+
 <% end %>
+
+</div>
+</div>

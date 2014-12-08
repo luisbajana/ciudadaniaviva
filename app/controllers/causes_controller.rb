@@ -8,7 +8,7 @@ class CausesController < ApplicationController
     @causes = Cause.order("id DESC").all
     #$twitter.update("@luisbajana Hola creador!")
 
-    @json = Location.all.to_gmaps4rails
+    
     @json = Location.all.to_gmaps4rails do |search, marker|         
          marker.picture({
            :picture => "assets/marker.png",

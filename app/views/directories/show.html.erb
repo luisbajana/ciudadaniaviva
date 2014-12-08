@@ -1,25 +1,39 @@
-<p id="notice"><%= notice %></p>
+<div class="col-md-12  left-align wow fadeInLeft animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
+      
+      <!-- SECTION TITLE -->
+      <h2 class="dark-text"><%= @directory.name %></h2>
+      
+      
+      <p><%= @directory.description %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @directory.name %>
-</p>
-
-<p>
-  <b>Location:</b>
-  <%= @directory.location_id %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%= @directory.category %>
-</p>
-
-<p>
-  <b>Url:</b>
-  <%= @directory.url %>
-</p>
+      <br />
+</div>
 
 
-<%= link_to 'Edit', edit_directory_path(@directory) %> |
-<%= link_to 'Back', directories_path %>
+<%= gmaps({
+    "map_options" => { "detect_location" => true, "center_on_user" => true, "auto_zoom" => false, "zoom" => 11 },
+    "markers"     => {"data" => @json }
+   })
+    %>
+
+
+<div class="col-md-12 text-left">
+
+	<table class="table table-hover">
+	  <tr>
+	    <th>Dirección</th>
+	    <th>Descripción</th>
+	  </tr>
+
+	<% @locations.each do |location| %>
+	  <tr>
+	    <td><%= location.address %></td>
+	    <td><%= location.description %></td>
+	  </tr>
+	<% end %>
+	</table>
+
+	<br />
+
+</div>
+

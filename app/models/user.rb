@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :provider, :uid
+  attr_accessible :name, :provider, :uid, :picture, :nickname
 
   has_many :supports
   has_many :causes, :through => :supports
@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
       user.provider = auth["provider"]  
       user.uid = auth["uid"]  
       user.name = auth["info"]["name"]  
+      user.picture = auth['info']['image']
+      user.nickname = auth['info']['nickname']
     end  
   end  
 

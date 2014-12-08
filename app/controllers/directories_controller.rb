@@ -1,6 +1,9 @@
 class DirectoriesController < ApplicationController
   # GET /directories
   # GET /directories.json
+
+  before_filter :auth_user, :except => [:index, :show]
+
   def index
     @directories = Directory.all
 
@@ -10,10 +13,30 @@ class DirectoriesController < ApplicationController
     end
   end
 
+
+  def locations_per_directory(directory)
+    @location = Location.find_all_by_directory_id(directory)
+    @location.count
+  end
+  helper_method :locations_per_directory
+
+
+  
   # GET /directories/1
   # GET /directories/1.json
   def show
     @directory = Directory.find(params[:id])
+    @locations = Location.find_all_by_directory_id(@directory.id)
+
+    
+    @json = Location.find_all_by_directory_id(@directory.id).to_gmaps4rails do |search, marker|         
+         marker.infowindow render_to_string(:partial => "/causes/infoWindow", :locals => { :address => search.address })      
+         marker.picture({
+           :picture => "../assets/marker.png",
+           :width   => 36,
+           :height  => 54
+         })
+      end
 
     respond_to do |format|
       format.html # show.html.erb
@@ -41,6 +64,7 @@ class DirectoriesController < ApplicationController
   # POST /directories.json
   def create
     @directory = Directory.new(params[:directory])
+    @directory.user_id = current_user.id;
 
     respond_to do |format|
       if @directory.save
