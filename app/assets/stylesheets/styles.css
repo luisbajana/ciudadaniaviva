@@ -837,3 +837,22 @@ label.col-sm-3.control-label{
 .modal-footer{
     margin-top: 5px;
 }
+
+
+.btn-ciudadania{
+    color: #FFF;
+    background-color: #F26D34;
+    border-color: #EB6A32;
+
+}
+
+
+.btn-ciudadania:hover{
+    color: #FFF;
+    background-color: #F26D34;
+}
+
+
+.progress{
+    height: 10px !important;
+}
