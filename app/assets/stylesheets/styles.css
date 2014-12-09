@@ -813,9 +813,22 @@ label.col-sm-3.control-label{
 }
 
 .title_heigth{
-    height: 70px !important;
+    height: 50px !important;
+    line-height: 20px;
+    margin-top: 0px;
+    font-size: 1em;
+    font-weight: bold;
+    
+}
+.title_heigth a{
+    color: black !important;
 }
 
 .impact_height{
-    height: 30px !important;
+    height: 45px !important;
+}
+
+
+.thumbnail .caption{
+
 }

@@ -1,7 +1,7 @@
 
 
   <div class="text-left">
-    <h2>Causas</h2>
+    <h3>Últimas Causas</h3>
     
 
     <div class="container">
@@ -51,16 +51,6 @@
                 </div>
 
 
-                <!-- EDITING MODE -->
-                <% if current_user %>
-                    <% if current_user.id == cause.user_id %>
-                      <div class="container">
-                        <%= link_to 'Editar', edit_cause_path(cause) %>
-                      </div>
-                      <br />
-                    <% end %>
-                <% end %>
-                <!-- -->
 
 
                 
