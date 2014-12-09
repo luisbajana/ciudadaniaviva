@@ -68,3 +68,10 @@ ERROR:  column "este es el impacto mas lindo del mundo" does not exist at charac
 STATEMENT:  update causes set impact="este es el impacto mas lindo del mundo";
 ERROR:  column "este es el impacto mas lindo del mundo" does not exist at character 26
 STATEMENT:  update causes set impact="este es el impacto mas lindo del mundo";
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2014-12-08 23:45:46 ECT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started

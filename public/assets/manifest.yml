@@ -57,8 +57,8 @@ app-icons/fonts/app-icons.ttf: app-icons/fonts/app-icons-d690a1573e4ba2e5cdb1317
 app-icons/fonts/app-icons/index.ttf: app-icons/fonts/app-icons-d690a1573e4ba2e5cdb13176c15bb004.ttf
 app-icons/fonts/app-icons.woff: app-icons/fonts/app-icons-f6eb0dff2342d3acdf92f38ff399604e.woff
 app-icons/fonts/app-icons/index.woff: app-icons/fonts/app-icons-f6eb0dff2342d3acdf92f38ff399604e.woff
-application.css: application-276f30972e8721cf05838a532c326eff.css
-application/index.css: application-276f30972e8721cf05838a532c326eff.css
+application.css: application-5ce82b2bb4cbc329923ecded74434cd6.css
+application/index.css: application-5ce82b2bb4cbc329923ecded74434cd6.css
 elegant-icons/fonts/ElegantIcons.eot: elegant-icons/fonts/ElegantIcons-d7176c87fa2a9b73c8154d82d2818f69.eot
 elegant-icons/fonts/ElegantIcons/index.eot: elegant-icons/fonts/ElegantIcons-d7176c87fa2a9b73c8154d82d2818f69.eot
 elegant-icons/fonts/ElegantIcons.svg: elegant-icons/fonts/ElegantIcons-991e6289ecd34625ddaca84d2a840f9b.svg
