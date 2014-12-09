@@ -12,14 +12,14 @@
                     <div class="form-group">
                         <label for="concept" class="col-sm-3 control-label">Causa</label>
                         <div class="col-sm-9">
-                            <%= f.text_field :title, :class => 'form-control input-box', :placeholder => "Nombre de la causa, ej.: Donación de Sangre" %>
+                            <%= f.text_field :title, :class => 'form-control input-box', :maxlength => 45, :placeholder => "Nombre de la causa, ej.: Donación de Sangre" %>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="goal" class="col-sm-3 control-label">Meta</label>
                         <div class="col-sm-9">
-                            <%= f.text_area :impact, :size => "20x2", :class => 'form-control input-box', :placeholder => "Ej.: Si llegamos a la meta habremos ayudado a 10 personas" %>
+                            <%= f.text_area :impact, :size => "20x2", :maxlength => 100, :class => 'form-control input-box', :placeholder => "Ej.: Si llegamos a la meta habremos ayudado a 10 personas" %>
                         </div>
                     </div>
 
@@ -46,7 +46,7 @@
                     <div class="form-group">
                         <label for="description" class="col-sm-3 control-label">Descripción</label>
                         <div class="col-sm-9">
-                            <%= f.text_area :description, :size => "20x2", :class => 'form-control input-box', :placeholder => "Información extra de la causa." %>
+                            <%= f.text_area :description, :maxlength => 160, :size => "20x2", :class => 'form-control input-box', :placeholder => "Información extra de la causa." %>
                         </div>
                     </div>
 

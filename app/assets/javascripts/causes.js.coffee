@@ -1,2 +1,3 @@
 jQuery ->
-	$('#support_date').datepicker()
+  
+  $('#support_date').datepicker()

@@ -811,3 +811,11 @@ footer .copyright {
 label.col-sm-3.control-label{
     padding-top: 20px !important;
 }
+
+.title_heigth{
+    height: 70px !important;
+}
+
+.impact_height{
+    height: 30px !important;
+}
