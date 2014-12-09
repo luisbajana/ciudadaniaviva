@@ -7,7 +7,7 @@ class Cause < ActiveRecord::Base
 
   has_attached_file :photo, :default_url => "/assets/missing.png", styles: {
     thumb: '100x100>',
-    square: '350x200#',
+    square: '350x180#',
     medium: '500x400>'
   }
 
