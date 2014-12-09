@@ -37,3 +37,13 @@
 
 </div>
 
+
+
+<% if current_user %>
+	<% if current_user == @directory.user_id %>
+		<%= link_to 'Editar', edit_directory_path(@directory) %> |
+	<% end %>
+<% end %>
+
+
+
