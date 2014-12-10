@@ -86,16 +86,19 @@
             <br />
             <%= form_tag import_locations_path, multipart: true do %>
             <div class="col-sm-6 text-right">
-              <%= file_field_tag :file %>
+              <%= file_field_tag :file, :class=>'form-control input-box' %>
             </div>
 
             <div class="col-sm-6 text-right">  
-              
-                <%= f.select(:directory_id, options_from_collection_for_select(Directory.all, :id, :name,:selected => params[:directory_id]), {}, {:class => 'form-control input-box'}) %>
-                
-                <button class="btn btn-default" type="submit" id="submit" name="submit" data-style="expand-left">Importar direcciones</button>
-              
+                <%= select_tag(:directory_id, options_from_collection_for_select(Directory.all, :id, :name,:selected => params[:directory_id]),:class => 'form-control input-box') %>
             </div>  
+
+            <br />
+
+            <div class="col-sm-12 text-center">
+              <button class="btn btn-default" type="submit" id="submit" name="submit" data-style="expand-left">Importar direcciones</button>
+            </div>
+
             <% end %>
 
           </div>
