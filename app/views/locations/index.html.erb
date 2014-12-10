@@ -31,9 +31,9 @@
 
     <% if current_user %>
       <% if current_user.id == location.user_id %>
-        <td><%= link_to 'Show', location %></td>
-        <td><%= link_to 'Edit', edit_location_path(location) %></td>
-        <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', location %></td>
+        <td><%= link_to 'Editar', edit_location_path(location) %></td>
+        <td><%= link_to 'Eliminar', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
     <% end %>
     
@@ -43,6 +43,6 @@
 
 <br />
 
-<%= link_to 'New Location', new_location_path %>
+<%= link_to 'Crear una nueva dirección', new_location_path %>
 
 </div>
