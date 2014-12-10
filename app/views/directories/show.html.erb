@@ -40,8 +40,8 @@
 
 
 <% if current_user %>
-	<% if current_user == @directory.user_id %>
-		<%= link_to 'Editar', edit_directory_path(@directory) %> |
+	<% if current_user.id == @directory.user_id %>
+		<%= link_to 'Editar', edit_directory_path(@directory) %> | <%= link_to 'Eliminar Directorio', @directory, method: :delete, data: { confirm: '¿Estás seguro?' } %>
 	<% end %>
 <% end %>
 
