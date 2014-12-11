@@ -61,6 +61,15 @@ class CausesController < ApplicationController
   helper_method :cause_id
 
 
+
+  def supporter(id)
+    @user = User.find(id)
+    @user
+  end
+  helper_method :supporter
+
+
+
   def show
 
     @cause = Cause.find_by_custom_url(params[:cause])

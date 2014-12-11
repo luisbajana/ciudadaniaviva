@@ -75,3 +75,6 @@ LOG:  database system is shut down
 LOG:  database system was shut down at 2014-12-08 23:45:46 ECT
 LOG:  database system is ready to accept connections
 LOG:  autovacuum launcher started
+ERROR:  syntax error at or near "DELETE" at character 40
+STATEMENT:  delete from supporters where user_id=3
+	DELETE FROM supporters WHERE user_id=3;

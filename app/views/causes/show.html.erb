@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
 
 <!-- 
@@ -60,6 +60,24 @@
     "markers"     => {"data" => @json }
    })
     %>
+
+  <div class="text-left">   
+  <h2>Personas que apoyan la causa</h2>
+        <table class="table">
+          <tr>
+            <% @supporters.each do |supporter| %> 
+              <td>
+                <%= image_tag(supporter(supporter.user_id).picture) %>
+              </td>
+
+              <td><%= supporter(supporter.user_id).name %></td>
+
+            <% end %>  
+
+          </tr>
+        </table>
+
+    </div>    
 
   <% if current_user %>
       <% if current_user.id == @cause.user_id %>
