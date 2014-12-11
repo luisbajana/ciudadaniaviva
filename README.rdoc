@@ -1,2 +1,1 @@
-rails g model support user_id:integer cause_id:integer date:string hour:string
-
+Project under GNU GPL License.
