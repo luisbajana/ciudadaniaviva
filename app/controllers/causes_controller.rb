@@ -47,7 +47,7 @@ class CausesController < ApplicationController
     else
       return false
     end
-     
+    @is_supporter.user_id
   end
   helper_method :already_supporter
 
