@@ -47,9 +47,7 @@ class CausesController < ApplicationController
     else
       return false
     end
-    
-
-
+     
   end
   helper_method :already_supporter
 
