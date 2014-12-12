@@ -24,7 +24,11 @@
 
 
           <% if current_user %>
-            <%= already_supporter(@cause.id,current_user.id) %>
+            
+            
+            <p><%= @cause.id %></p>
+            <p><%= current_user.id %></p>
+
             <% if already_supporter(@cause.id,current_user.id) == false %>
               <%= render 'supports/form' %>
             <% else %>
