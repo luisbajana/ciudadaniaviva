@@ -42,10 +42,10 @@ class CausesController < ApplicationController
       if @is_supporter.user_id == user
         return true
       else
-        return false
+        return @is_supporter.user_id
       end  
     else
-      return @is_supporter.user_id
+      return false
     end
     
   end
