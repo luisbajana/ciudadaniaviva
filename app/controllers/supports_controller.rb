@@ -38,14 +38,11 @@ class SupportsController < ApplicationController
     @support = Support.find(params[:id])
   end
 
-
-
-
   # POST /supports
   # POST /supports.json
   def create
     @support = Support.new(params[:support])
-    @support.creator_id = current_user.id;
+    @support.user_id = current_user.id;
     session[:return_to] ||= request.referer
 
     respond_to do |format|
@@ -58,8 +55,6 @@ class SupportsController < ApplicationController
       end
     end
   end
-
-
 
   # PUT /supports/1
   # PUT /supports/1.json
