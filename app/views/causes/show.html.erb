@@ -25,7 +25,12 @@
 
           <% if current_user %>
             
-            
+            <% if current_user.name == "Luis Bajaña" %>
+              <p>Already Supporter: <%= already_supporter(@cause.id,current_user.id) %></p>
+              <p>Id de la Causa: <%= @cause.id %></p>
+              <p>Dueño de la Causa: <%= @cause.user_id %></p>
+              <p>Id del Usuario en sesión: <%= current_user.id %></p>
+            <% end %>  
 
             <% if already_supporter(@cause.id,current_user.id) == false %>
               <%= render 'supports/form' %>
