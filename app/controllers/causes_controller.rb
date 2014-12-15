@@ -35,21 +35,18 @@ class CausesController < ApplicationController
 
 
   def already_supporter(cause,user)
-    @supporter = Support.find_all_by_cause_id(cause)
-    if @supporter
+    @supporters = Support.find_all_by_cause_id(cause)
 
-      @supporter.each do |supporter|
+    if @supporters
+      @supporters.each do |supporter|
         if supporter.user_id == user
           return true
-        else
-          return false
         end
       end
-      
     else
       return false
     end
-    
+    return false
   end
   helper_method :already_supporter
 
