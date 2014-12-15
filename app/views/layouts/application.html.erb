@@ -40,9 +40,13 @@
 			<!-- NAVIGATION LINKS -->
 			<div class="navbar-collapse collapse" id="kane-navigation">
 				<ul class="nav navbar-nav navbar-right main-navigation">
+					<li>
+						<% if current_user %>
+							<%= image_tag current_user.picture, :class=>"img-circle", :width=>"40px;" %>
+						<% end %>	
+					</li>
 					<li><a href="/causes">Ayudar</a></li>
 					<li><%= link_to "Crea tu ayuda", "/causes/new",:class => "btn" %></li>
-					<li><%= link_to "Directorios", "/directories" %></li>
 				</ul>
 			</div>
 		</div> <!-- /END CONTAINER -->
@@ -75,7 +79,7 @@
 		<li><a href=""><i class="social_instagram_square"></i></a></li>
 	</ul>
 	<div class="container">
-		<p class="copyright">Ciudadanía Viva 2014, <%= link_to "GNU GPL", "http://www.gnu.org/copyleft/gpl.html" %>	</p>
+		<p class="copyright">Ciudadanía Viva 2014</p>
 	</div>
 </footer>
 <%= yield :scripts %>

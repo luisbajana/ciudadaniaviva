@@ -35,9 +35,15 @@ class CausesController < ApplicationController
 
 
   def already_supporter(cause,user)
-    @is_supporter = Support.find_by_cause_id(cause)
-    if @is_supporter
+    @supporter = Support.find_by_cause_id(cause)
+    if @supporter
+
+      if @supporter.user_id == user
         return true
+      else
+        return false
+      end
+
     else
       return false
     end

@@ -69,7 +69,7 @@
     
     <% if current_user %>
       <h3><%= current_user.name %></h3>
-      <%= image_tag current_user.picture %>
+      <%= image_tag current_user.picture, :class=>"img-circle" %>
       <%= link_to "Cerrar Sesión", '/signout' %>
     <% end %>
     
