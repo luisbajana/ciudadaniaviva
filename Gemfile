@@ -15,6 +15,7 @@ gem 'twitter'
 gem "tweet-button"
 gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
+gem 'ransack'
 
 # Gems used only for assets and not required
 # in production environments by d-twitterefault.

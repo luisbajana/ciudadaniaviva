@@ -1,5 +1,6 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  logo_black: "logo_black.png"
+  be_happy_outline: "Happiness is helping others"
+  be_happy_h2: "Join into a social cause and increase your happiness"
+  causes: "CAUSES"
+  create: "CREATE YOUR CAUSE"

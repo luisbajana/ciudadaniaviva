@@ -5,7 +5,9 @@ class CausesController < ApplicationController
   before_filter :auth_user, :except => [:index, :show]
 
   def index
-    @causes = Cause.order("id DESC").all
+    @search = Cause.search(params[:q])
+    @causes = @search.result
+
     #$twitter.update("@luisbajana Hola creador!")
 
     

@@ -85,3 +85,11 @@ LOG:  database system is shut down
 LOG:  database system was shut down at 2014-12-14 10:56:12 ECT
 LOG:  database system is ready to accept connections
 LOG:  autovacuum launcher started
+FATAL:  database "moneycycle" does not exist
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2014-12-18 18:00:14 ECT
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections

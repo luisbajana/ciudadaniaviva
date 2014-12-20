@@ -19,6 +19,54 @@
 
 
 
+<% current_uri = request.env['PATH_INFO'] %>
+
+<% if current_uri == "/" %>
+
+
+	<header class="header principal" data-stellar-background-ratio="0.5" id="home">
+
+		<div class="container">
+			
+				<div class="col-md-3 col-xs-12">
+					<%= image_tag t 'logo_black' %>	
+				</div>
+
+				<div class="col-md-5 col-md-offset-4 col-xs-12 menuprincipalfront">
+					<div class="col-md-6 col-xs-12 menuitem"><%= link_to t("causes"),"/causes" %></div>
+					<div class="col-md-6 col-xs-12 menuitem"><%= link_to t("create"), "/causes/new" %></div>
+				</div>
+			
+			
+			<h1><%= t "be_happy_outline" %></h1>
+			<h3><%= t "be_happy_h2" %></h3>
+		</div>
+
+		<div id="white-translucent">
+			<div class="container">
+
+				<%= search_form_for @search, :class=>"form-inline" do |f| %>
+
+					<div class="form-group">
+						<%= f.text_field :city_cont, :class=>"form-control input-lg", :placeholder=>"Where do you want to help?" %>
+				 	</div>
+				 	<button type="submit" class="btn btn-orange text-uppercase input-lg">Search</button>
+				<% end %>
+
+
+			</div>
+		</div>
+
+	</header>
+
+
+
+
+
+<% else %>
+
+
+
 
 <!-- STICKY NAVIGATION -->
 	<div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation">
@@ -33,7 +81,7 @@
 				<span class="icon-bar"></span>
 				</button>
 
-				<a class="navbar-brand" href="#"><%= image_tag "logo_black.png" %></a>
+				<%= link_to image_tag("logo_black.png"), "/", :class=>"navbar-brand" %>
 				
 			</div>
 			
@@ -51,9 +99,57 @@
 			</div>
 		</div> <!-- /END CONTAINER -->
 	</div> <!-- /END STICKY NAVIGATION -->
+
+
+
+
+
+
+<% end %>
+
+
+
+
+
+
+
 	<br />	
 	<br />	
 	<br />	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -3,6 +3,13 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user  
 
+  before_filter :set_locale
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
+
+
   def auth_user
     redirect_to "/auth/twitter" unless user_signed_in?
   end

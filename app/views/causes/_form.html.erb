@@ -31,6 +31,13 @@
                     </div> 
 
                     <div class="form-group">
+                        <label for="city" class="col-sm-3 control-label">Ciudad</label>
+                        <div class="col-sm-9">
+                            <%= f.text_field :city, :class => 'form-control input-box', :maxlength => 100, :placeholder => "Ej.: Santiago, Chile" %>
+                        </div>
+                    </div> 
+
+                    <div class="form-group">
                         <label for="description" class="col-sm-3 control-label">#Hashtag</label>
                         <div class="col-sm-9">
                             <%= f.text_field :custom_url, :class => 'form-control input-box', :placeholder => "Sin espacios, ej.: donaciondesangre" %>
