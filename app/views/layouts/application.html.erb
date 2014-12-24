@@ -8,6 +8,8 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,400,300italic' rel='stylesheet' type='text/css'>
 
  
@@ -29,11 +31,11 @@
 		<div class="container">
 			
 				<div class="col-md-3 col-xs-12">
-					<%= image_tag t 'logo' %>	
+					<%= image_tag t 'logo', :class=>"img-responsive" %>	
 				</div>
 
 				<div class="col-md-5 col-md-offset-4 col-xs-12 menuprincipalfront">
-					<div class="col-md-6 col-xs-12 menuitem"><%= link_to t("causes"),"/causes" %></div>
+					<div class="col-md-5 col-md-offset-1 col-xs-12 menuitem"><%= link_to t("causes"),"/causes" %></div>
 					<div class="col-md-6 col-xs-12 menuitem"><%= link_to t("create"), "/causes/new" %></div>
 				</div>
 			
@@ -48,7 +50,7 @@
 				<%= search_form_for @search, :class=>"form-inline" do |f| %>
 
 					<div class="form-group">
-						<%= f.text_field :city_cont, :class=>"form-control input-lg", :placeholder=>"Where do you want to help?" %>
+						<%= f.text_field :city_cont, :class=>"form-control input-lg", :placeholder=> t('where_to_help') %>
 				 	</div>
 				 	<button type="submit" class="btn btn-orange text-uppercase input-lg">Search</button>
 				<% end %>
@@ -93,8 +95,9 @@
 							<%= image_tag current_user.picture, :class=>"img-circle", :width=>"40px;" %>
 						<% end %>	
 					</li>
-					<li><a href="/causes">Ayudar</a></li>
-					<li><%= link_to "Crea tu ayuda", "/causes/new",:class => "btn" %></li>
+					<li><%= link_to t("help"), "/causes" %></li>
+
+					<li><%= link_to t("create_your_help"), "/causes/new",:class => "btn" %></li>
 				</ul>
 			</div>
 		</div> <!-- /END CONTAINER -->
@@ -175,7 +178,7 @@
 		<li><a href=""><i class="social_instagram_square"></i></a></li>
 	</ul>
 	<div class="container">
-		<p class="copyright">Ciudadanía Viva 2014</p>
+		<p class="copyright"><%= t('behappy') %> 2014</p>
 	</div>
 </footer>
 <%= yield :scripts %>

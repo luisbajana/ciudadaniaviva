@@ -1,6 +1,6 @@
 
   <div class="text-left">
-    <h3> Causas</h3>
+    <h3> <%= t('causes') %></h3>
     
 
     <div class="container">
@@ -17,7 +17,7 @@
                   <h3 class="title_heigth"><%= link_to cause.title, "/#{cause.custom_url}" %></h3>
                   <!-- <p><%= cause.description %></p> -->
                   <p class="impact_height"><%= cause.impact %></p>
-                  <p><%= link_to "Ayudar", "/#{cause.custom_url}", :class => 'btn btn-ciudadania' %></p>
+                  <p><%= link_to t('help'), "/#{cause.custom_url}", :class => 'btn btn-ciudadania' %></p>
                   
                 </div>
 
@@ -34,16 +34,16 @@
 
                   <div class="row">
                     
-                    <div class="col-md-6 text-center"><b><%= num_supporters(cause.id) %></b><br/>
+                    <div class="col-md-6 col-xs-6 text-center"><b><%= num_supporters(cause.id) %></b><br/>
                       <% if num_supporters(cause.id) > 1 or num_supporters(cause.id)==0 %>
-                        <small>PERSONAS AYUDANDO</small>
+                        <small><%= t'people_helping' %></small>
                       <% else %>
-                        <small>PERSONA AYUDANDO</small>
+                        <small><%= t'people_helping' %></small>
                       <% end %>
 
                     </div>
 
-                    <div class="col-md-6 text-center"><b><%= cause.goal %></b><br/><small>NECESITAMOS</small></div>
+                    <div class="col-md-6 col-xs-6 text-center"><b><%= cause.goal %></b><br/><small><%= t'we_need' %></small></div>
                     
                   </div>
 
@@ -69,7 +69,7 @@
     <% if current_user %>
       <h3><%= current_user.name %></h3>
       <%= image_tag current_user.picture, :class=>"img-circle" %>
-      <%= link_to "Cerrar Sesión", '/signout' %>
+      <%= link_to t("logout"), '/signout' %>
     <% end %>
     
   </div>
