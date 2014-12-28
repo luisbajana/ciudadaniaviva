@@ -32,7 +32,7 @@
               <%= custom_tweet_button('Compártelo y ayúdanos a llegar a la meta',{ :via => "ciudadaniaviva", :url => "http://www.ciudadaniaviva.com/"+@cause.custom_url, :text => "Voy a ayudar en "+@cause.title }, {:class => "btn btn-lg btn-success"}) %>
             <% end %>
           <% else %>
-            <a href="/auth/twitter" class="btn btn-default btn-lg standard-button">Ingresa con Twitter para ayudar</a>
+            <a href="/auth/twitter" class="btn btn-default btn-lg standard-button"><%= t('loginwithtwitter') %></a>
           <% end %>  
 
 
@@ -53,44 +53,63 @@
 </section>
 
 
-<h3>Estos son los lugares donde puedes colaborar:</h3>
 
-
-<%= gmaps({
-    "map_options" => { "detect_location" => true, "center_on_user" => true, "auto_zoom" => false, "zoom" => 11 },
-    "markers"     => {"data" => @json }
-   })
-    %>
-
-  <div class="text-left">   
-    <h2>Creado por</h2>
-    <%= supporter(@cause.user_id).name %>
+ <br />
+ <div class="col-md-8 col-xs-12">
+    <h3 class="text-left"><%= t('placestoprovidehelp') %></h3>
+    <%= gmaps({
+      "map_options" => { "detect_location" => true, "center_on_user" => true, "auto_zoom" => false, "zoom" => 11 },
+      "markers"     => {"data" => @json }
+     })
+      %>
   </div>
 
+  <div class="col-md-4 col-xs-12">
+    
+    <div class="text-left col-md-12 col-xs-12">   
+      <h3><%= t('about') %></h3>
+      <p><%= @cause.description %></p>
+    </div>
+
   
-  <div class="text-left">   
-  <h2>Personas que apoyan la causa</h2>
-        <table class="table">
-          <tr>
-            <% @supporters.each do |supporter| %> 
-              <td>
-                <%= image_tag(supporter(supporter.user_id).picture, :class=>"img-circle") %>
-              </td>
+    <div class="text-left col-md-12 col-xs-12">   
+      <h3><%= t('supporters') %></h3>
+          <table class="table">
+            <tr>
+              <% @supporters.each do |supporter| %> 
+                <td>
+                  <%= link_to image_tag(supporter(supporter.user_id).picture, :class=>"img-circle") , "http://www.twitter.com/"+supporter(supporter.user_id).nickname  %>
+                </td>
 
-              <td><%= supporter(supporter.user_id).name %></td>
+                <td><%= supporter(supporter.user_id).name %></td>
+                <td><%= supporter.date %></td>
 
-            <% end %>  
+              <% end %>  
 
-          </tr>
-        </table>
+            </tr>
+          </table>
+    </div>   
 
-    </div>    
-  
+    <div class="text-left col-md-12 col-xs-12">   
+      <h3><%= t('createdby') %></h3>
+      <%= supporter(@cause.user_id).name %>
+    </div>
 
-  <% if current_user %>
+
+    <div class="text-left col-md-12 col-xs-12">
+      <% if current_user %>
       <% if current_user.id == @cause.user_id %>
         <%= link_to 'Editar', edit_cause_path(@cause) %> |
         <%= link_to 'Regresar', causes_path %>
       <% end %>
   <% end %>
+    </div>
+
+
+  </div>
+
+
+
+
+  
 

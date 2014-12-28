@@ -10,77 +10,67 @@
             <div class="panel-default">
                 <div class="panel-body form-horizontal payment-form">
                     <div class="form-group">
-                        <label for="concept" class="col-sm-3 control-label">Causa</label>
+                        <label for="concept" class="col-sm-3 control-label"><%= t 'cause' %></label>
                         <div class="col-sm-9">
-                            <%= f.text_field :title, :class => 'form-control input-box', :maxlength => 60, :placeholder => "Nombre de la causa, ej.: Donación de Sangre" %>
+                            <%= f.text_field :title, :class => 'form-control input-box', :maxlength => 60, :placeholder => t("causeplaceholder") %>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="goal" class="col-sm-3 control-label">Meta</label>
                         <div class="col-sm-9">
-                            <%= f.text_area :impact, :size => "20x2", :maxlength => 90, :class => 'form-control input-box', :placeholder => "Ej.: Si llegamos a la meta habremos ayudado a 10 personas" %>
+                            <%= f.text_area :impact, :size => "20x2", :maxlength => 90, :class => 'form-control input-box', :placeholder => t("goalplaceholder") %>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="date" class="col-sm-8 control-label">¿Cuantas personas necesitas?</label>
+                        <label for="date" class="col-sm-8 control-label"><%= t("howmanypeople") %></label>
                         <div class="col-sm-4">
                             <%= f.select(:goal, options_for_select(%w[1 10 20 30 40 50 60 70 80 90 100 200 300 400 500 600 700 800 900 1000]), {}, {:class => "form-control input-box"}) %>
                         </div>
                     </div> 
 
                     <div class="form-group">
-                        <label for="city" class="col-sm-3 control-label">Ciudad</label>
+                        <label for="city" class="col-sm-3 control-label"><%= t("city") %></label>
                         <div class="col-sm-9">
-                            <%= f.text_field :city, :class => 'form-control input-box', :maxlength => 100, :placeholder => "Ej.: Santiago, Chile" %>
+                            <%= f.text_field :city, :class => 'form-control input-box', :maxlength => 100, :placeholder => t("cityplaceholder") %>
                         </div>
                     </div> 
 
                     <div class="form-group">
                         <label for="description" class="col-sm-3 control-label">#Hashtag</label>
                         <div class="col-sm-9">
-                            <%= f.text_field :custom_url, :class => 'form-control input-box', :placeholder => "Sin espacios, ej.: donaciondesangre" %>
+                            <%= f.text_field :custom_url, :class => 'form-control input-box', :placeholder => t("hashtagplaceholder") %>
                         </div>
                     </div> 
                     <div class="form-group">
-                        <label for="amount" class="col-sm-3 control-label">Direcciones</label>
+                        <label for="amount" class="col-sm-3 control-label"><%= t('addresses') %></label>
                         <div class="col-sm-9">
                             <%= f.select(:dataset, options_from_collection_for_select(Directory.all, :id, :name), {}, {:class => 'form-control input-box'}) %>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="description" class="col-sm-3 control-label">Descripción</label>
+                        <label for="description" class="col-sm-3 control-label"><%= t('description') %></label>
                         <div class="col-sm-9">
-                            <%= f.text_area :description, :maxlength => 160, :size => "20x2", :class => 'form-control input-box', :placeholder => "Información extra de la causa." %>
+                            <%= f.text_area :description, :maxlength => 160, :size => "20x2", :class => 'form-control input-box', :placeholder => t("informationplaceholder") %>
                         </div>
                     </div>
 
                     
                     <div class="form-group">
-                        <label for="amount" class="col-sm-3 control-label">Foto</label>
+                        <label for="amount" class="col-sm-3 control-label"><%= t('photo') %></label>
                         <div class="col-sm-9">
                             <%= f.file_field :photo, :class => 'form-control input-box' %>
                         </div>
-                    </div>
-
-                    <!--
-                    <div class="form-group">
-                        <label for="status" class="col-sm-3 control-label">Status</label>
-                        <div class="col-sm-9">
-                            <%= f.text_field :impact, :class => 'form-control input-box', :placeholder => "Impacto" %>
-                        </div>
-                    </div> 
-                   -->
-                    
+                    </div>                    
 
                      
 
 
                     <div class="form-group">
                         <div class="col-sm-12 text-right">
-                            <button class="btn btn-primary standard-button2 ladda-button" type="submit" id="submit" name="submit" data-style="expand-left">Crear Causa</button>
+                            <button class="btn btn-primary standard-button2 ladda-button" type="submit" id="submit" name="submit" data-style="expand-left"><%= t('createcause') %></button>
                         </div>
                     </div>
                 </div>

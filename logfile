@@ -100,3 +100,15 @@ LOG:  database system is shut down
 LOG:  database system was shut down at 2014-12-23 08:12:21 ECT
 LOG:  autovacuum launcher started
 LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2014-12-26 15:08:29 ECT
+FATAL:  the database system is starting up
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down

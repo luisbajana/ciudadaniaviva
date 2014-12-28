@@ -723,17 +723,22 @@ object {
 }
 
 .download .color-overlay {
-    padding-top: 110px;
-    padding-bottom: 70px;
+    /*padding-top: 110px;
+    padding-bottom: 70px;*/
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .download .download-container {
-    padding-bottom: 80px;
+    /*padding-bottom: 80px;*/
 }
 
 .download .subscription-form-container {
-    padding-bottom: 80px;
+    padding-bottom: 0px !important;
+
 }
+
+
 
 .download .subscription-form .input-box {
     height: 57px;

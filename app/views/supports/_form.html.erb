@@ -23,22 +23,22 @@
 
       <div class="col-md-6 text-left">
         <div class="field">
-          <%= f.label "Lugares donde puedes colaborar: " %><br />
+          <%= f.label t("placestoprovidehelp") %><br />
 
-          <%= f.select(:address, options_for_select(@locations.map(&:address)), {:include_blank => "Selecciona el lugar más cercano a ti"}, {:class => 'form-control input-box'}) %>
+          <%= f.select(:address, options_for_select(@locations.map(&:address)), {:include_blank => t('selectaplace')}, {:class => 'form-control input-box'}) %>
         </div>
       </div>
 
       <div class="col-md-3 text-left">
         <div class="field">
-          <%= f.label "Voy a ir en: " %><br />
-          <%= f.text_field :date, :class => 'form-control input-box', :placeholder => "Fecha" %>
+          <%= f.label t('iwillgo') %><br />
+          <%= f.text_field :date, :class => 'form-control input-box', :placeholder => t('date') %>
         </div>
       </div>
 
       <div class="col-md-2 text-left">
         <%= f.label " " %><br />
-        <%= f.submit "Unirme a esta causa", :class => "btn btn-default standard-button" %>
+        <%= f.submit t('jointothiscause'), :class => "btn btn-default standard-button" %>
       </div>
         
       
