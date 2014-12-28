@@ -74,20 +74,22 @@
   
     <div class="text-left col-md-12 col-xs-12">   
       <h3><%= t('supporters') %></h3>
-          <table class="table">
-            <tr>
-              <% @supporters.each do |supporter| %> 
+          <table class="table table-hover">
+            
+            <% @supporters.each do |supporter| %> 
+              <tr>
                 <td>
-                  <%= link_to image_tag(supporter(supporter.user_id).picture, :class=>"img-circle") , "http://www.twitter.com/"+supporter(supporter.user_id).nickname  %>
+                    <%= link_to image_tag(supporter(supporter.user_id).picture, :class=>"img-circle") , "http://www.twitter.com/#{supporter(supporter.user_id).nickname}"  %>
                 </td>
 
                 <td><%= supporter(supporter.user_id).name %></td>
                 <td><%= supporter.date %></td>
+              </tr>
+            <% end %>  
 
-              <% end %>  
-
-            </tr>
+            
           </table>
+          <%= link_to "View all", "/" %>
     </div>   
 
     <div class="text-left col-md-12 col-xs-12">   

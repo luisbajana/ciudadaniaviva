@@ -73,7 +73,7 @@ class CausesController < ApplicationController
 
     @cause = Cause.find_by_custom_url(params[:cause])
     @support = Support.new
-    @supporters = Support.find_all_by_cause_id(@cause.id)
+    @supporters = Support.limit(5).find_all_by_cause_id(@cause.id)
 
     @locations = Location.find_all_by_directory_id(@cause.dataset)
     
