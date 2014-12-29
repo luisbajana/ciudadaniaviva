@@ -1,5 +1,5 @@
 class Cause < ActiveRecord::Base
-  attr_accessible :dataset, :description, :title, :impact, :custom_url, :goal, :photo, :user_id, :city
+  attr_accessible :dataset, :description, :title, :impact, :custom_url, :goal, :photo, :user_id, :city, :status
   has_many :supports
   has_many :users, :through => :supports
   belongs_to :user

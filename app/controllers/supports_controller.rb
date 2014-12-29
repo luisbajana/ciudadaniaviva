@@ -43,11 +43,11 @@ class SupportsController < ApplicationController
   def create
     @support = Support.new(params[:support])
     @support.user_id = current_user.id;
-    session[:return_to] ||= request.referer
+    
 
     respond_to do |format|
       if @support.save
-        format.html { redirect_to session.delete(:return_to), notice: '¡Excelente! Ahora a compartir para llegar a la meta' }
+        format.html { redirect_to '/', notice: '¡Excelente! Ahora a compartir para llegar a la meta' }
         format.json { render json: @support, status: :created, location: @support }
       else
         format.html { render action: "new" }
