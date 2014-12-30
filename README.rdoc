@@ -1,1 +1,20 @@
-Project under GNU GPL License.
+Helping others increase our sense of community and makes us happy.
+
+Be Happy is a web platform for social causes, which allow people to join and create social causes, and sharing their happy experiences by helping others.
+
+
+Sharing their experiences
+We create something called the happiness wall. In this wall people upload their experience in a meditation format, so they are sharing how happier they are now.
+
+
+Creation of a social cause
+Everyone could create a social cause in BeHappy. Filling a simple form you're ready to spread the word about your cause in your city.
+
+
+Join into a social cause
+Everyone could join into a social cause, they just have to select a city, and a date in order to help.
+
+
+
+Social Media Dynamics
+We use the power of social media dynamics to increase the number of participants of a cause, that's why we implement Twitter login.

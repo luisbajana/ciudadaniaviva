@@ -41,8 +41,8 @@ screenshots/4.jpg: screenshots/4-15de1778d234820c653af1d2009ba5cf.jpg
 screenshots/4/index.jpg: screenshots/4-15de1778d234820c653af1d2009ba5cf.jpg
 single-iphone.png: single-iphone-eb0d1a0862897ce15a8138637fc13035.png
 single-iphone/index.png: single-iphone-eb0d1a0862897ce15a8138637fc13035.png
-application.js: application-1f113c670cf8e6d6f11f555015418d13.js
-application/index.js: application-1f113c670cf8e6d6f11f555015418d13.js
+application.js: application-0343df0a2f0becca1dab9dc9cef16b48.js
+application/index.js: application-0343df0a2f0becca1dab9dc9cef16b48.js
 app-icons/fonts/app-icons.eot: app-icons/fonts/app-icons-2bfe908937124f9e4e1a47b37bc99251.eot
 app-icons/fonts/app-icons/index.eot: app-icons/fonts/app-icons-2bfe908937124f9e4e1a47b37bc99251.eot
 app-icons/fonts/app-icons.svg: app-icons/fonts/app-icons-93c356f72237725c9ac20a62f5dd1b73.svg
