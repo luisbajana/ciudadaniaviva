@@ -911,3 +911,7 @@ label.col-sm-8.control-label{
     border-color: #E06530;
     text-transform: uppercase !important;
 }
+
+.navbar-nav>li img{
+    margin-top: 10px;
+}
