@@ -5,19 +5,21 @@ class CausesController < ApplicationController
   before_filter :auth_user, :except => [:index, :show]
 
   def index
-    @search = Cause.limit(12).search(params[:q])
+
+    if request.env['PATH_INFO'] == "/"
+      @search = Cause.limit(6).search(params[:q])
+      @testimonials = Testimonial.all
+    else 
+      @search = Cause.search(params[:q])
+    end
+   
+    
     @causes = @search.result
 
     #$twitter.update("@luisbajana Hola creador!")
 
     
-    @json = Location.all.to_gmaps4rails do |search, marker|         
-         marker.picture({
-           :picture => "assets/marker.png",
-           :width   => 36,
-           :height  => 54
-         })
-      end
+   
 
     @cause = Cause.new
 
@@ -26,6 +28,11 @@ class CausesController < ApplicationController
       format.json { render json: @causes }
     end
   end
+
+
+
+
+
 
 
 
