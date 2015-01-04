@@ -30,7 +30,7 @@
         <div class="form-group">
           <label for="description" class="col-sm-3 control-label"><%= t('category') %></label>
           <div class="col-sm-9">
-             <%= select_tag(:directorycategory_dummy, options_for_select(["Comunidad","Medio Ambiente","Salud", "Educación"]), {:class=>"form-control input-box", :include_blank=>true}) %>
+             <%= select_tag(:directorycategory_dummy, options_for_select([t("community"),t("health"),t("environment"), t("education")]), {:class=>"form-control input-box", :include_blank=>true}) %>
           </div>
       </div> 
 
