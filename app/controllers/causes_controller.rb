@@ -5,7 +5,7 @@ class CausesController < ApplicationController
   before_filter :auth_user, :except => [:index, :show]
 
   def index
-    @search = Cause.search(params[:q])
+    @search = Cause.limit(12).search(params[:q])
     @causes = @search.result
 
     #$twitter.update("@luisbajana Hola creador!")
@@ -42,7 +42,7 @@ class CausesController < ApplicationController
     if @supporters
       @supporters.each do |supporter|
         if supporter.user_id == user
-          return true
+          return supporter
         end
       end
     else
@@ -73,6 +73,7 @@ class CausesController < ApplicationController
 
     @cause = Cause.find_by_custom_url(params[:cause])
     @support = Support.new
+    @testimonial = Testimonial.new
     @supporters = Support.limit(5).find_all_by_cause_id(@cause.id)
 
     @locations = Location.find_all_by_directory_id(@cause.dataset)

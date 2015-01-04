@@ -60,8 +60,14 @@ class DirectoriesController < ApplicationController
     @directory = Directory.find(params[:id])
   end
 
-  # POST /directories
-  # POST /directories.json
+
+  def create_directory
+    @directory = Directory.create([{ :name=>params[:name],:category=>params[:category], :user_id=>current_user.id }])
+    render :json => @directory
+  end
+  helper_method :create_directory
+
+  
   def create
     @directory = Directory.new(params[:directory])
     @directory.user_id = current_user.id;

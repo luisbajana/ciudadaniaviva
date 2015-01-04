@@ -42,8 +42,14 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
   end
 
-  # POST /locations
-  # POST /locations.json
+
+  def create_location
+    @location = Location.create([{ :description=>params[:description], :address=>params[:address],:directory_id=>params[:directory_id], :user_id=>current_user.id }])
+    render :json => @location
+  end
+  helper_method :create_location
+
+
   def create
     @location = Location.new(params[:location])
     @location.user_id = current_user.id;

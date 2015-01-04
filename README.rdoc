@@ -1,4 +1,10 @@
-Helping others increase our sense of community and makes us happy.
+
+
+
+Helping others increase our sense of community and makes us happy, that's why we create a place where you can find a way to increase your happiness by helping others.
+
+
+
 
 Be Happy is a web platform for social causes, which allow people to join and create social causes, and sharing their happy experiences by helping others.
 
@@ -18,3 +24,42 @@ Everyone could join into a social cause, they just have to select a city, and a 
 
 Social Media Dynamics
 We use the power of social media dynamics to increase the number of participants of a cause, that's why we implement Twitter login.
+
+
+Social directory
+Everytime that someone create a Cause, they have to create places when people can help, indirectly they are helping to build a social directory, this directory could be use in the future for another social causes.
+
+When you create an address, we use several services to provide a map to the users.
+
+
+All these problems are solved by BeHappy. As a platform BeHappy provide the necessary tools to manage a social cause. This tools are: Creation of a social cause, Joining into a social cause, Sharing Happy Experiences, and the Social directory.
+
+
+
+
+
+
+What inspired me?
+During the last months I organized and collaborated on several social causes, because helping others makes me happy. In this period I faced the fact that is really hard to keep a track of the activities related to a cause, also there’s no place where I can share my experience with others, and encourage them to create or join into a social cause as well. That’s why we create www.behappy.help, which is a web platform for social causes. BeHappy allows people to join and create social causes, using social media dynamics and geolocation.
+ 
+Who is my target user?
+Now there are thousand of people and organizations who are working on social causes, these people are our early adopters. Using the platform features and through our early adopters we want to reach all those who are trying to find ways to increase their happiness, because helping others increase our sense of community and makes us happy.
+
+How it works?
+We use the power of social media dynamics to increase the number of participants for a social cause. The application is fully integrated with Twitter, so people can share and create social causes using their Twitter’s account. Why we use Twitter? We made an analysis about  the people who create and joining into a social causes, and as a result we realized that they use this social network as a communication channel, to promote and manage the participation in the cause. But using only Twitter has has several problems, for example: the person who create the cause couldn’t track the progress, and can’t communicate with the participants in an easy way. In the other hand, the participants couldn’t see where they can help, and the most important problem is that they can’t share their happy experience with others.
+
+
+
+
+What inspired me?
+During the last months I organized and collaborated on several social causes, because helping others makes me happy. In this period I faced the fact that is really hard to keep a track of the activities related to a cause, also there’s no place where I can share my experience with others, and encourage them to create or join into a social cause as well. That’s why we create www.behappy.help, which is a web platform for social causes. BeHappy allows people to join and create social causes, using social media dynamics and geolocation to boost the happiness around the world.
+ 
+Who is our target user?
+Now there are thousand of people and organizations who are working on social causes, these people are our early adopters. Using the platform features and through our early adopters we want to reach all those who are trying to find ways to increase their happiness, because helping others increase our sense of community and makes us happy.
+
+Social Dynamics and Geolocation
+The application is fully integrated with Twitter, so people can share and create social causes using their Twitter’s account. By using this social network we preserve the user’s natural communication channel, but also we add several tools to monitoring, communicate and manage the progress of a cause. Tools like Google Maps, and an entire scalable software infrastructure behind, allow us to say that we can help others using technology. 
+
+
+Tagline:
+It’s a web and web-mobile platform for social causes, that allow people being happy by helping others.

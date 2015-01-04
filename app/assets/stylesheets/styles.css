@@ -853,6 +853,10 @@ label.col-sm-3.control-label{
     padding-top: 20px !important;
 }
 
+label.col-sm-8.control-label{
+    padding-top: 20px !important;
+}
+
 .title_heigth{
     height: 50px !important;
     line-height: 20px;
