@@ -20,9 +20,8 @@ jQuery ->
   	cause_category = $('#directorycategory_dummy').val()
 
   	$("#cause_title").val($('#cause_name_dummy').val())
-  	
+  	$("#cause_custom_url").val( $("#cause_name_dummy").val().replace RegExp(" ", "g"), "" )
   	$("#cause_goal").val($('#cause_participants').val())
-  	$("#cause_custom_url").val("test")
 
   	$("#cause_description").val($('#cause_description_dummy').val())
   
