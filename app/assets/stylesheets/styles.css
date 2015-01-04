@@ -915,3 +915,7 @@ label.col-sm-8.control-label{
 .navbar-nav>li img{
     margin-top: 10px;
 }
+
+blockquote{
+    margin-top: 10px;
+}

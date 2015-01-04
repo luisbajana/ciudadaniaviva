@@ -6,9 +6,9 @@ class CausesController < ApplicationController
 
   def index
 
+    @testimonials = Testimonial.limit(6).order("id DESC").all
     if request.env['PATH_INFO'] == "/"
       @search = Cause.limit(6).search(params[:q])
-      @testimonials = Testimonial.all
     else 
       @search = Cause.search(params[:q])
     end
