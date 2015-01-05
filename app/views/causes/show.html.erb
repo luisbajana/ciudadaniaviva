@@ -102,6 +102,7 @@
     <div class="text-left col-md-12 col-xs-12">   
       <h3><%= t('about') %></h3>
       <p><%= @cause.description %></p>
+      <small><%= t('createdby') %> <%= supporter(@cause.user_id).name %></small>
     </div>
 
   
@@ -112,7 +113,7 @@
             <% @supporters.each do |supporter| %> 
               <tr>
                 <td>
-                    <%= link_to image_tag(supporter(supporter.user_id).picture, :class=>"img-circle") , "http://www.twitter.com/#{supporter(supporter.user_id).nickname}"  %>
+                    <%= link_to image_tag(supporter(supporter.user_id).picture, :class=>"img-circle") , "http://www.twitter.com/#{supporter(supporter.user_id).nickname}" %>
                 </td>
 
                 <td><%= supporter(supporter.user_id).name %></td>
@@ -125,10 +126,7 @@
           <%= link_to "View all", "/" %>
     </div>   
 
-    <div class="text-left col-md-12 col-xs-12">   
-      <h3><%= t('createdby') %></h3>
-      <%= supporter(@cause.user_id).name %>
-    </div>
+    
 
 
     <div class="text-left col-md-12 col-xs-12">
