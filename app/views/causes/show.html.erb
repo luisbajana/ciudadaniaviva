@@ -90,11 +90,13 @@
  <br />
  <div class="col-md-8 col-xs-12">
     <h3 class="text-left"><%= t('placestoprovidehelp') %></h3>
-    <%= gmaps({
-      "map_options" => { "detect_location" => false, "center_on_user" => false, "auto_zoom" => false, "zoom" => 2 },
-      "markers"     => {"data" => @json }
-     })
+    <%= 
+        gmaps({
+        "map_options" => { "auto_zoom" => true },
+        "markers"     => {"data" => @json }
+       })
       %>
+      
   </div>
 
   <div class="col-md-4 col-xs-12">
