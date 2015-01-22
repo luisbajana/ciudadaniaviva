@@ -858,7 +858,7 @@ label.col-sm-8.control-label{
 }
 
 .title_heigth{
-    height: 50px !important;
+    height: 25px !important;
     line-height: 20px;
     margin-top: 0px;
     font-size: 0.9em;
@@ -871,6 +871,11 @@ label.col-sm-8.control-label{
 
 .impact_height{
     height: 45px !important;
+    font-size: 12px;
+}
+
+.city{
+    height: 20px !important;
     font-size: 12px;
 }
 

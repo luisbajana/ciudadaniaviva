@@ -23,8 +23,8 @@ clients-pic/2.jpg: clients-pic/2-06ce1c6b2eb148766f280571d3bf6cfc.jpg
 clients-pic/2/index.jpg: clients-pic/2-06ce1c6b2eb148766f280571d3bf6cfc.jpg
 clients-pic/3.jpg: clients-pic/3-06ce1c6b2eb148766f280571d3bf6cfc.jpg
 clients-pic/3/index.jpg: clients-pic/3-06ce1c6b2eb148766f280571d3bf6cfc.jpg
-favicon.ico: favicon-874148043d0d5ddbd75df83ca78a6fea.ico
-favicon/index.ico: favicon-874148043d0d5ddbd75df83ca78a6fea.ico
+favicon.ico: favicon-53a24cf4cbeff65153fbc2b8ad94d4a3.ico
+favicon/index.ico: favicon-53a24cf4cbeff65153fbc2b8ad94d4a3.ico
 loading.gif: loading-3d96e1871674b518bf21aa16b61f2151.gif
 loading/index.gif: loading-3d96e1871674b518bf21aa16b61f2151.gif
 marker.png: marker-44a86698795d081b3ac1a9b8012e9430.png
@@ -51,8 +51,8 @@ app-icons/fonts/app-icons.ttf: app-icons/fonts/app-icons-d690a1573e4ba2e5cdb1317
 app-icons/fonts/app-icons/index.ttf: app-icons/fonts/app-icons-d690a1573e4ba2e5cdb13176c15bb004.ttf
 app-icons/fonts/app-icons.woff: app-icons/fonts/app-icons-f6eb0dff2342d3acdf92f38ff399604e.woff
 app-icons/fonts/app-icons/index.woff: app-icons/fonts/app-icons-f6eb0dff2342d3acdf92f38ff399604e.woff
-application.css: application-e43a3efe44d48e5d99592317b1019ae2.css
-application/index.css: application-e43a3efe44d48e5d99592317b1019ae2.css
+application.css: application-ec5ead5822ea3bbde4e1c225df79afd1.css
+application/index.css: application-ec5ead5822ea3bbde4e1c225df79afd1.css
 elegant-icons/fonts/ElegantIcons.eot: elegant-icons/fonts/ElegantIcons-d7176c87fa2a9b73c8154d82d2818f69.eot
 elegant-icons/fonts/ElegantIcons/index.eot: elegant-icons/fonts/ElegantIcons-d7176c87fa2a9b73c8154d82d2818f69.eot
 elegant-icons/fonts/ElegantIcons.svg: elegant-icons/fonts/ElegantIcons-991e6289ecd34625ddaca84d2a840f9b.svg
@@ -141,3 +141,13 @@ jquery-ui/ui-icons_888888_256x240.png: jquery-ui/ui-icons_888888_256x240-22e2620
 jquery-ui/ui-icons_888888_256x240/index.png: jquery-ui/ui-icons_888888_256x240-22e2620afd5b74f20af6c26e32a54483.png
 jquery-ui/ui-icons_cd0a0a_256x240.png: jquery-ui/ui-icons_cd0a0a_256x240-3b8db78091d814fcf9520d7fa84821ac.png
 jquery-ui/ui-icons_cd0a0a_256x240/index.png: jquery-ui/ui-icons_cd0a0a_256x240-3b8db78091d814fcf9520d7fa84821ac.png
+FontAwesome.otf: FontAwesome-189639d2167637c4b9d84385fe8dcc9b.otf
+FontAwesome/index.otf: FontAwesome-189639d2167637c4b9d84385fe8dcc9b.otf
+fontawesome-webfont.eot: fontawesome-webfont-3111f9ce607806e50e645780f82cf8d3.eot
+fontawesome-webfont/index.eot: fontawesome-webfont-3111f9ce607806e50e645780f82cf8d3.eot
+fontawesome-webfont.svg: fontawesome-webfont-e6c5315905ab716bcee03fd330949a5e.svg
+fontawesome-webfont/index.svg: fontawesome-webfont-e6c5315905ab716bcee03fd330949a5e.svg
+fontawesome-webfont.ttf: fontawesome-webfont-c3a570d9c50fedf633a8dbd657cee670.ttf
+fontawesome-webfont/index.ttf: fontawesome-webfont-c3a570d9c50fedf633a8dbd657cee670.ttf
+fontawesome-webfont.woff: fontawesome-webfont-c3505b2ba2be317c06bb81329741ee60.woff
+fontawesome-webfont/index.woff: fontawesome-webfont-c3505b2ba2be317c06bb81329741ee60.woff
