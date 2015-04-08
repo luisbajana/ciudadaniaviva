@@ -1,3 +1,4 @@
+
 <%= form_for(@testimonial) do |f| %>
   <% if @testimonial.errors.any? %>
     <div id="error_explanation">
@@ -29,7 +30,14 @@
 
 
   <%= f.hidden_field :user_id, :value=>current_user.id %>
-  <%= f.hidden_field :cause_id, :value=>cause_id(params[:cause]) %>
+
+  <% if params[:cause] %>
+    <%= f.hidden_field :cause_id, :value=>cause_id(params[:cause]) %>
+  <% else %>  
+    
+    <%= f.select(:cause_id, options_from_collection_for_select(Cause.all, :id, :name,:selected => params[:cause_id]), {}, {:class => 'form-control input-box'}) %>
+
+  <% end %>
 
 
   <div class="form-group">
