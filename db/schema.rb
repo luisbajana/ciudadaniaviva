@@ -42,79 +42,6 @@ ActiveRecord::Schema.define(:version => 20141229011800) do
     t.text     "description"
   end
 
-  create_table "ecuador_agua_consumos", :force => true do |t|
-    t.float    "minimoConsumo"
-    t.float    "mediaConsumo"
-    t.float    "maximoConsumo"
-    t.float    "totalConsumo"
-    t.float    "valorMinimo"
-    t.float    "valorMedia"
-    t.float    "valorMaximo"
-    t.float    "minimoSierra"
-    t.float    "minimoCosta"
-    t.float    "minimoAmazonia"
-    t.float    "mediaSierra"
-    t.float    "mediaCosta"
-    t.float    "mediaAmazonia"
-    t.float    "maximoSierra"
-    t.float    "maximoCosta"
-    t.float    "maximoAmazonia"
-    t.float    "metrosCubicosTotalesSierra"
-    t.float    "metrosCubicosTotalesCosta"
-    t.float    "metrosCubicosTotalesAmazonia"
-    t.float    "valorMinimoSierra"
-    t.float    "valorMinimoCosta"
-    t.float    "valorMinimoAmazonia"
-    t.float    "valorMediaSierra"
-    t.float    "valorMediaCosta"
-    t.float    "valorMediaAmazonia"
-    t.float    "valorMaximoSierra"
-    t.float    "valorMaximoCosta"
-    t.float    "valorMaximoAmazonia"
-    t.float    "valorTotalSierra"
-    t.float    "valorTotalCosta"
-    t.float    "valorTotalAmazonia"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
-  end
-
-  create_table "gs", :force => true do |t|
-    t.string   "EcuadorConsumo"
-    t.float    "minimoConsumo"
-    t.float    "mediaConsumo"
-    t.float    "maximoConsumo"
-    t.float    "totalConsumo"
-    t.float    "valorMinimo"
-    t.float    "valorMedia"
-    t.float    "valorMaximo"
-    t.float    "minimoSierra"
-    t.float    "minimoCosta"
-    t.float    "minimoAmazonia"
-    t.float    "mediaSierra"
-    t.float    "mediaCosta"
-    t.float    "mediaAmazonia"
-    t.float    "maximoSierra"
-    t.float    "maximoCosta"
-    t.float    "maximoAmazonia"
-    t.float    "metrosCubicosTotalesSierra"
-    t.float    "metrosCubicosTotalesCosta"
-    t.float    "metrosCubicosTotalesAmazonia"
-    t.float    "valorMinimoSierra"
-    t.float    "valorMinimoCosta"
-    t.float    "valorMinimoAmazonia"
-    t.float    "valorMediaSierra"
-    t.float    "valorMediaCosta"
-    t.float    "valorMediaAmazonia"
-    t.float    "valorMaximoSierra"
-    t.float    "valorMaximoCosta"
-    t.float    "valorMaximoAmazonia"
-    t.float    "valorTotalSierra"
-    t.float    "valorTotalCosta"
-    t.float    "valorTotalAmazonia"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
-  end
-
   create_table "locations", :force => true do |t|
     t.float    "latitude"
     t.string   "longitude"
@@ -127,37 +54,6 @@ ActiveRecord::Schema.define(:version => 20141229011800) do
     t.integer  "user_id"
   end
 
-  create_table "partes", :force => true do |t|
-    t.string   "tipo"
-    t.string   "estado"
-    t.string   "macpc"
-    t.float    "latitude"
-    t.float    "longitude"
-    t.string   "address"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
-    t.datetime "photo_updated_at"
-    t.boolean  "gmaps"
-    t.integer  "user_id"
-    t.integer  "factor_contaminante"
-    t.float    "precio"
-  end
-
-  create_table "presupuestos", :force => true do |t|
-    t.string   "tipo"
-    t.string   "funcion"
-    t.integer  "codigoSectorial"
-    t.string   "sectorial"
-    t.integer  "codigoGrupo"
-    t.string   "grupo"
-    t.decimal  "valor"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-  end
-
   create_table "supports", :force => true do |t|
     t.integer  "cause_id"
     t.integer  "user_id"
@@ -167,16 +63,6 @@ ActiveRecord::Schema.define(:version => 20141229011800) do
     t.datetime "updated_at", :null => false
     t.string   "address"
     t.string   "status"
-  end
-
-  create_table "sustancia", :force => true do |t|
-    t.string   "nombre"
-    t.float    "contenidoporcentual"
-    t.float    "peso"
-    t.integer  "eficienciareciclaje"
-    t.text     "uso"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
   end
 
   create_table "testimonials", :force => true do |t|
