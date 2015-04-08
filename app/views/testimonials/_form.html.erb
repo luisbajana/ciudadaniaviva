@@ -35,7 +35,7 @@
     <%= f.hidden_field :cause_id, :value=>cause_id(params[:cause]) %>
   <% else %>  
     
-    <%= f.select(:cause_id, options_from_collection_for_select(Cause.all, :id, :name,:selected => params[:cause_id]), {}, {:class => 'form-control input-box'}) %>
+    <%= f.select(:cause_id, options_from_collection_for_select(Cause.all, :id, :description,:selected => params[:cause_id]), {}, {:class => 'form-control input-box'}) %>
 
   <% end %>
 
