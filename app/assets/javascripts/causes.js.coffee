@@ -2,7 +2,7 @@
 jQuery ->
   $( "#support_date" ).datepicker({ minDate: 0, maxDate: "+1M" },"yy-mm-d");
 
- 
+
 
   $('#steptwo').click ->
    $('#step2Container').hide()
@@ -24,12 +24,11 @@ jQuery ->
   	$("#cause_goal").val($('#cause_participants').val())
 
   	$("#cause_description").val($('#cause_description_dummy').val())
-  
+
 
 
   	$.ajax(url: "/directories/create_directory?name="+cause_name+"&category="+cause_category).done (html) ->
- 
-	  	
+
 
 	  	$('#step1Container').hide()
 
@@ -38,16 +37,12 @@ jQuery ->
 
 
 	  	$('#addanaddress').click ->
+
 	  		description = $('#place_name_dummy').val()
 	  		address = $('#location_address_dummy').val()
-	  		
 
 	  		$("#cause_dataset").val(html[0].id)
 	  		$("#cause_city").val($('#causecity').val())
 
 	  		$.ajax(url: "/locations/create_location?description="+description+"&address="+address+"&directory_id="+html[0].id).done (html) ->
 	  			console.log('done')
-	        	
-	          
-
-  

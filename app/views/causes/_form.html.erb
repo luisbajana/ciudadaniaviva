@@ -1,43 +1,43 @@
 <div class="row">
 
 
-<h4 id="steps">Step 1</h4>
-  
-  
-<div class="col-md-6 col-md-offset-3" id="step1Container"> 
+<h4 id="steps">Paso 1</h4>
+
+
+<div class="col-md-6 col-md-offset-3" id="step1Container">
 
         <div class="form-group">
             <label for="concept" class="col-sm-3 control-label"><%= t 'cause' %></label>
             <div class="col-sm-9">
-                <%= text_field_tag(:cause_name_dummy, value = nil, options = {:placeholder=>t("causeplaceholder"), :class=>"form-control input-box"}) %>
+                <%= text_field_tag(:cause_name_dummy, value = nil, options = {:placeholder=>"Donación de Comida", :class=>"form-control input-box"}) %>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="description" class="col-sm-3 control-label"><%= t('description') %></label>
+            <label for="description" class="col-sm-3 control-label"><%= "Descripción" %></label>
             <div class="col-sm-9">
-                <%= text_area_tag(:cause_description_dummy, content = nil, options = {:placeholder => t("informationplaceholder"), :class => 'form-control input-box'}) %>
+                <%= text_area_tag(:cause_description_dummy, content = nil, options = {:placeholder => "Describe el propósito de tu causa", :class => 'form-control input-box'}) %>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="date" class="col-sm-3 control-label"><%= t("participants") %></label>
+            <label for="date" class="col-sm-3 control-label"><%= "Participantes" %></label>
             <div class="col-sm-9">
                 <%= select_tag(:cause_participants, options_for_select(%w[1 10 20 30 40 50 60 70 80 90 100 200 300 400 500 600 700 800 900 1000]), options = {:class=>"form-control input-box"}) %>
             </div>
-        </div>    
+        </div>
 
         <div class="form-group">
-          <label for="description" class="col-sm-3 control-label"><%= t('category') %></label>
+          <label for="description" class="col-sm-3 control-label"><%= "Categoría" %></label>
           <div class="col-sm-9">
-             <%= select_tag(:directorycategory_dummy, options_for_select([t("community"),t("health"),t("environment"), t("education")]), {:class=>"form-control input-box", :include_blank=>true}) %>
+             <%= select_tag(:directorycategory_dummy, options_for_select(["Comunidad","Salud","Medio Ambiente", "Educación"]), {:class=>"form-control input-box", :include_blank=>true}) %>
           </div>
-      </div> 
+      </div>
 
         <div class="form-group text-right">
-            <%= link_to t("Next"), "#", :class=>'btn btn-primary btn-lg btn-step1', :id=>"step1" %>
+            <%= link_to "Siguiente", "#", :class=>'btn btn-primary btn-lg btn-step1', :id=>"step1" %>
         </div>
-    
+
 
 </div>
 <!-- END OF STEP1 CONTAINER -->
@@ -51,8 +51,8 @@
 <div class="col-md-12" id="step2Container">
   <br />
   <br />
-  <!-- LEFT BLOCK -->  
-  <div class="col-md-6">  
+  <!-- LEFT BLOCK -->
+  <div class="col-md-6">
 
     <h4>Create an Address</h4>
 
@@ -75,7 +75,7 @@
         <div class="col-sm-9">
             <%= text_field_tag(:causecity, value=nil ,options = {:placeholder => t("cityplaceholder"), :class => 'form-control input-box', :maxlength => 100} ) %>
         </div>
-    </div> 
+    </div>
 
 
     <div class="form-group">
@@ -88,9 +88,9 @@
   <!-- END OF LEFT BLOCK -->
 
 
-  <!-- RIGHT BLOCK -->  
+  <!-- RIGHT BLOCK -->
   <div class="col-md-6">
-    <h4>Select an existing directory</h4>  
+    <h4>Select an existing directory</h4>
     <div class="form-group">
         <label for="amount" class="col-sm-3 control-label"><%= t('addresses') %></label>
         <div class="col-sm-9">
@@ -104,7 +104,7 @@
   <div class="col-md-12 text-right">
       <div class="form-group">
             <div class="col-md-12">
-                    <%= link_to t("next"), "#", :class=>'btn btn-primary btn-lg', :id=>"steptwo" %>
+                    <%= link_to "Siguiente", "#", :class=>'btn btn-primary btn-lg', :id=>"steptwo" %>
             </div>
       </div>
   </div>
@@ -126,7 +126,7 @@
 
 
 <!-- STEP3 -->
-<div class="col-md-6 col-md-offset-3" id="step3Container"> 
+<div class="col-md-6 col-md-offset-3" id="step3Container">
 
     <%= form_for @cause, :html => { :multipart => true, :role => "form" } do |f| %>
         <div class="form-group">
@@ -141,14 +141,14 @@
             <%= f.hidden_field :custom_url %>
             <%= f.hidden_field :dataset %>
             <%= f.hidden_field :description %>
-            
+
             <div class="form-group">
                 <div class="col-sm-12 text-right">
                     <button class="btn btn-primary standard-button2 ladda-button" type="submit" id="submit" name="submit" data-style="expand-left"><%= t('createcause') %></button>
                 </div>
-            </div>    
+            </div>
 
-        </div>     
+        </div>
     <% end %>
 
 </div>
@@ -158,10 +158,9 @@
 
 
 
-  
+
   <br />
   <br />
 
 
 </div>
-

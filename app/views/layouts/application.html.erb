@@ -3,7 +3,7 @@
 <head>
 
 
-  <title>Be Happy</title>
+  <title>Ciudadanía Viva</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -14,8 +14,8 @@
 
   <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,400,300italic' rel='stylesheet' type='text/css'>
 
- 
-  
+
+
 
 </head>
 <body>
@@ -31,19 +31,19 @@
 	<header class="header principal" data-stellar-background-ratio="0.5" id="home">
 
 		<div class="container">
-			
+
 				<div class="col-md-3 col-xs-12">
-					<%= image_tag t 'logo', :class=>"img-responsive" %>	
+					<%= image_tag "ciudania_viva.png", :class=>"img-responsive" , :width => "200px" %>
 				</div>
 
 				<div class="col-md-5 col-md-offset-4 col-xs-12 menuprincipalfront">
-					<div class="col-md-5 col-md-offset-1 col-xs-12 menuitem"><%= link_to t("causes"),"/causes" %></div>
-					<div class="col-md-6 col-xs-12 menuitem"><%= link_to t("create"), "/causes/new" %></div>
+					<div class="col-md-5 col-md-offset-1 col-xs-12 menuitem"><%= link_to "VER CAUSAS","/causes" %></div>
+					<div class="col-md-6 col-xs-12 menuitem"><%= link_to "CREAR CAUSAS", "/causes/new" %></div>
 				</div>
-			
-			
-			<h1><%= t "be_happy_outline" %></h1>
-			<h3><%= t "be_happy_h2" %></h3>
+
+
+			<h1><%= "Ayudémos a los demás" %></h1>
+			<h3><%= "Únete a una causa social" %></h3>
 		</div>
 
 		<div id="white-translucent">
@@ -52,9 +52,9 @@
 				<%= search_form_for @search, :class=>"form-inline" do |f| %>
 
 					<div class="form-group">
-						<%= f.text_field :city_cont, :class=>"form-control input-lg", :placeholder=> t('where_to_help') %>
+						<%= f.text_field :city_cont, :class=>"form-control input-lg", :placeholder=> 'Donde ayudar' %>
 				 	</div>
-				 	<button type="submit" class="btn btn-orange text-uppercase input-lg">Search</button>
+				 	<button type="submit" class="btn btn-orange text-uppercase input-lg">Buscar</button>
 				<% end %>
 
 
@@ -76,7 +76,7 @@
 	<div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation">
 		<div class="container">
 			<div class="navbar-header">
-				
+
 				<!-- LOGO ON STICKY NAV BAR -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#kane-navigation">
 				<span class="sr-only">Toggle navigation</span>
@@ -86,20 +86,20 @@
 				</button>
 
 				<%= link_to image_tag("behappy.png"), "/", :class=>"navbar-brand" %>
-				
+
 			</div>
-			
+
 			<!-- NAVIGATION LINKS -->
 			<div class="navbar-collapse collapse" id="kane-navigation">
 				<ul class="nav navbar-nav navbar-right main-navigation">
 					<li>
 						<% if current_user %>
 							<%= image_tag current_user.picture, :class=>"img-circle", :width=>"40px;" %>
-						<% end %>	
+						<% end %>
 					</li>
-					<li><%= link_to t("help"), "/causes" %></li>
+					<li><%= link_to "Ayudar", "/causes" %></li>
 
-					<li><%= link_to t("create_your_help"), "/causes/new",:class => "btn" %></li>
+					<li><%= link_to "Crea una Causa", "/causes/new",:class => "btn" %></li>
 				</ul>
 			</div>
 		</div> <!-- /END CONTAINER -->
@@ -118,9 +118,9 @@
 
 
 
-	<br />	
-	<br />	
-	<br />	
+	<br />
+	<br />
+	<br />
 
 
 
@@ -181,7 +181,7 @@
 	</ul>
 	-->
 	<div class="container">
-		<p class="copyright"><%= t('behappy') %> 2015</p>
+		<p class="copyright">Ciudadanía Viva 2016</p>
 	</div>
 </footer>
 <%= yield :scripts %>
