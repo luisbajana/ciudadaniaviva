@@ -9,17 +9,14 @@ class CausesController < ApplicationController
     @testimonials = Testimonial.limit(6).order("id DESC").all
     if request.env['PATH_INFO'] == "/"
       @search = Cause.limit(6).search(params[:q])
-    else 
+    else
       @search = Cause.search(params[:q])
     end
-   
-    
+
+
     @causes = @search.result
 
     #$twitter.update("@luisbajana Hola creador!")
-
-    
-   
 
     @cause = Cause.new
 
@@ -84,7 +81,7 @@ class CausesController < ApplicationController
     @supporters = Support.limit(5).find_all_by_cause_id(@cause.id)
 
     @locations = Location.find_all_by_directory_id(@cause.dataset)
-    
+
 
     @json = Location.find_all_by_directory_id(@cause.dataset).to_gmaps4rails do |search, marker|
          marker.infowindow render_to_string(:partial => "/causes/infoWindow", :locals => { :address => search.address })

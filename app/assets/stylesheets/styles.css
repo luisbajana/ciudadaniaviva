@@ -112,7 +112,7 @@ li {
 
 
 /*---------------------------------------
-   Typography                
+   Typography
 -----------------------------------------*/
 
 /* FONT FACE LOADER */
@@ -125,7 +125,7 @@ li {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
- 
+
     @font-face {
         font-family: 'Lane';
         src: url('/assets/lanenar_Lane.svg#Lane') format('svg');
@@ -168,7 +168,7 @@ h5 {
 }
 
 /*---------------------------------------
-   CUSTOM BUTTON              
+   CUSTOM BUTTON
 -----------------------------------------*/
 
 .standard-button,
@@ -200,7 +200,7 @@ h5 {
 
 
 /*---------------------------------------
-   TEXTS               
+   TEXTS
 -----------------------------------------*/
 
 .white-text {
@@ -217,7 +217,7 @@ h5 {
 
 
 /*---------------------------------------
-   SECTIONS          
+   SECTIONS
 -----------------------------------------*/
 
 .section-header {
@@ -237,7 +237,7 @@ h5 {
 }
 
 /*---------------------------------------
-   LINES          
+   LINES
 -----------------------------------------*/
 
 .colored-line {
@@ -265,12 +265,12 @@ h5 {
 
 /*---------------------------------------
 =========================================
- **   SECTION STYLES                
+ **   SECTION STYLES
 =========================================
 -----------------------------------------*/
 
 /*---------------------------------------
-   SECTION:  HOME                 
+   SECTION:  HOME
 -----------------------------------------*/
 
 header {
@@ -284,7 +284,7 @@ header .color-overlay {
 }
 
 header img{
-    padding-top: 30px;
+    padding-top: 5px;
 }
 
 
@@ -320,7 +320,7 @@ header .full-screen {
 }
 
 #white-translucent{
-    background: rgba(255, 255, 255, 0.8); 
+    background: rgba(255, 255, 255, 0.8);
     padding:20px;
 }
 
@@ -394,7 +394,7 @@ header .intro-section .buttons {
 }
 
 /*---------------------------------------
-   SECTION:  FEATURES                 
+   SECTION:  FEATURES
 -----------------------------------------*/
 
 .features {
@@ -461,7 +461,7 @@ header .intro-section .buttons {
 
 
 /*---------------------------------------
-   SECTION:  BRIEF                 
+   SECTION:  BRIEF
 -----------------------------------------*/
 
 .app-brief {
@@ -526,7 +526,7 @@ object {
     background: transparent !important;
     margin: auto;
     margin-bottom: 50px;
-    margin-top: 40px; 
+    margin-top: 40px;
 }
 
 .video {
@@ -535,7 +535,7 @@ object {
 
 
 /*---------------------------------------
-   SECTION:  TESTIMONIALS                 
+   SECTION:  TESTIMONIALS
 -----------------------------------------*/
 .testimonials {
     background: url(/assets/bg-2.jpg) no-repeat center fixed;
@@ -604,7 +604,7 @@ object {
 
 
 /*---------------------------------------
-   SECTION:  SERVICES           
+   SECTION:  SERVICES
 -----------------------------------------*/
 
 .services {
@@ -628,7 +628,7 @@ object {
 
 
 /*---------------------------------------
-   SECTION:  SCREENSHOTS 
+   SECTION:  SCREENSHOTS
 -----------------------------------------*/
 
 .screenshots {
@@ -652,7 +652,7 @@ object {
 }
 
 /*---------------------------------------
-   SECTION:  PACKAGES | Added on version 1.7      
+   SECTION:  PACKAGES | Added on version 1.7
 -----------------------------------------*/
 
 .packages {
@@ -682,7 +682,7 @@ object {
 
 .single-package .price .color-bg h2 {
     color: #FFFFFF !important;
-} 
+}
 
 .single-package .price .sign {
     vertical-align: super;
@@ -711,7 +711,7 @@ object {
 
 
 /*---------------------------------------
-   SECTION:  DOWNLOAD                 
+   SECTION:  DOWNLOAD
 -----------------------------------------*/
 
 .download {
@@ -750,7 +750,7 @@ object {
     border: 2px solid #FFF;
 }
 
-.download .subscription-form .input-box:focus, 
+.download .subscription-form .input-box:focus,
 .download .subscription-form .input-box:active {
     color: #000;
     font-weight: 400;
@@ -767,7 +767,7 @@ object {
 
 
 /*---------------------------------------
-   SECTION:  FOOTER                
+   SECTION:  FOOTER
 -----------------------------------------*/
 
 .contact-box {
@@ -863,7 +863,7 @@ label.col-sm-8.control-label{
     margin-top: 0px;
     font-size: 0.9em;
     font-weight: bold;
-    
+
 }
 .title_heigth a{
     color: black !important;
@@ -923,4 +923,9 @@ label.col-sm-8.control-label{
 
 blockquote{
     margin-top: 10px;
+}
+
+
+.principal{
+  color: white !important;
 }
